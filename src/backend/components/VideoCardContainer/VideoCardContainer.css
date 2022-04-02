@@ -1,0 +1,19 @@
+
+.videocard-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 89vw;
+    font-family: 'DIN 2014', sans-serif;
+}
+.video-header{
+   width: 100%;
+   margin: 2rem;
+   display: flex; 
+   justify-content: space-between;
+}
+.video-header input{
+    width: 20rem;
+    outline: none;
+}

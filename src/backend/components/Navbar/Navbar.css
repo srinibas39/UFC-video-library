@@ -1,0 +1,59 @@
+.navbar {
+    background-color: rgba(34, 34, 34, 0.88);
+    height: 12vh;
+    color: #fff;
+    font-family: 'DIN 2014', sans-serif;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  align-items: center;
+  height: 100%;
+}
+.navbar ul > * {
+  padding: 0 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-login{
+    padding: 10px;
+    border: 1px solid #fff;
+    background: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'DIN 2014', sans-serif;
+    cursor: pointer;
+}
+.btn-login:hover{
+    
+    background-color: #d20a0a;
+}
+.btn-signup{
+  
+    background-color: #9e0808;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-family: 'DIN 2014', sans-serif;
+    cursor: pointer;
+    border: 1px solid #9e0808;
+}
+.btn-signup:hover{
+    background-color: #d20a0a;
+}
+.svg{
+    height: 100%;
+    width: 20%;
+    
+}
+svg{
+    height: 100%;
+    width: 100%;
+}
