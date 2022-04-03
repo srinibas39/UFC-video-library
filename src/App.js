@@ -15,6 +15,7 @@ import { Error } from "./components/Error/Error";
 import { PlayListPage } from "./pages/PlaylistPage";
 import { WatchLaterPage } from "./pages/WatchLaterPage";
 import { HistoryPage } from "./pages/HistoryPage";
+import { LikesPage } from "./pages/LikesPage";
 
 
 export const App = () => {
@@ -27,6 +28,7 @@ export const App = () => {
      <Route path="/playlist" element={<PlayListPage/>}/>
      <Route path="/watchlater" element={<WatchLaterPage/>}/>
      <Route path="/history" element={<HistoryPage/>}/>
+     <Route path="/likes" element={<LikesPage/>}/>
    </Routes>
 
   
