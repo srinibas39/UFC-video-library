@@ -7,18 +7,31 @@ import { VideoCardContainer } from "./components/VideoCardContainer/VideoCardCon
 import "./App.css"
 import { VideoComponent } from "./components/VideoComponent/VideoComponent";
 import { VideoOption } from "./components/VideoOptions/VideoOption";
+import { Routes , Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Explore } from "./pages/Explore";
+import { Watch } from "./pages/Watch";
+import { Error } from "./components/Error/Error";
+import { PlayListPage } from "./pages/PlaylistPage";
+import { WatchLaterPage } from "./pages/WatchLaterPage";
+import { HistoryPage } from "./pages/HistoryPage";
+
 
 export const App = () => {
   return <>
-    <NavBar />
-    {/* <Hero/> */}
-    {/* <div class="main">
-      <Categories />
-      <VideoCardContainer />
-    </div> */}
-    {/* <VideoCard/> */}
-    <VideoComponent/>
-    <VideoOption/>
+   <Routes>
+     <Route path="*" element={<Error/>}/>
+     <Route path="/" element={<Home/>}/>
+     <Route path="/explore" element={<Explore/>}/>
+     <Route path="/watch" element={<Watch/>}/>
+     <Route path="/playlist" element={<PlayListPage/>}/>
+     <Route path="/watchlater" element={<WatchLaterPage/>}/>
+     <Route path="/history" element={<HistoryPage/>}/>
+   </Routes>
+
+  
+   
+   
 
   </>
 }

@@ -1,0 +1,43 @@
+.playlists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.playlist{
+    margin: 1rem;
+    width: 15rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 4px #aaa;
+}
+.playlist-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 83%;
+}
+.playlists button{
+    height: 2rem;
+    cursor: pointer;
+}
+
+.playlist button span{
+    color:#d20a0a;
+
+}
+
+.playlist-container{
+    width: 89vw;
+    margin: 1rem;
+    font-family: 'DIN 2014', sans-serif; 
+    font-weight: 700;
+
+}
+.playlist-container h2{
+    margin: 2rem;
+}
