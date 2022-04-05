@@ -1,7 +1,13 @@
+
+import { useVideo } from "../../context/VideoContext"
 import { VideoCard } from "../VideoCard/VideoCard"
 import "./VideoCardContainer.css"
 
+
 export const VideoCardContainer = () => {
+
+    const {allVideos,setAllVideos} = useVideo()
+    
     return <>
         <>
 
@@ -10,10 +16,15 @@ export const VideoCardContainer = () => {
                     <h2>EXPLORE</h2>
                     <input type="search" placeholder="Type to search vidoes"></input>
                 </div>
-                <VideoCard />
-                <VideoCard />
-                <VideoCard />
-                <VideoCard />
+
+                {
+                   allVideos && allVideos.map((el)=>{
+                       return  <VideoCard key={el._id} el={el} />
+                   })
+
+                }
+               
+                
 
             </div>
 

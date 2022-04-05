@@ -57,3 +57,11 @@ svg{
     height: 100%;
     width: 100%;
 }
+.link-active{
+  color:#d20a0a;
+  text-decoration: none;
+}
+.link-not-active{
+  color:#fff;
+  text-decoration: none;
+}
