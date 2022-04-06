@@ -23,9 +23,13 @@
 }
 .video-option-categories li{
     margin: 0 1rem;
+    cursor: pointer;
 }
 .video-option-categories span{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.like{
+    color: deeppink;
 }

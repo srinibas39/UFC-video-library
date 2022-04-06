@@ -7,12 +7,12 @@ export const Like = () => {
         <Categories />
         <div className="likes">
             <h2>LIKES</h2>
-            <div className="card-container">
+            {/* <div className="card-container">
                 <VideoCard />
                 <VideoCard />
                 <VideoCard />
                 <VideoCard />
-            </div>
+            </div> */}
         </div>
     </div>
 }

@@ -9,10 +9,10 @@ export const VideoProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get("api/videos", {
+        const res = await axios.get("/api/videos", {
           method: "GET"
         })
-        
+
         setAllVideos(res.data.videos)
 
       }
@@ -20,11 +20,11 @@ export const VideoProvider = ({ children }) => {
         console.log(err);
       }
     })()
-  },[])
+  }, [])
 
 
 
-  return <VideoContext.Provider value={{allVideos,setAllVideos}} >
+  return <VideoContext.Provider value={{ allVideos, setAllVideos }} >
     {children}
   </VideoContext.Provider>
 }

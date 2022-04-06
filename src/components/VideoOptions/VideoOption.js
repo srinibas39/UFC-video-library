@@ -1,6 +1,10 @@
+
+import { AddLike } from "../AddLike/AddLike"
 import "./VideoOption.css"
 
 export const VideoOption = () => {
+
+    
     return <div className="video-option-container">
         <div className="video-option">
             <div className="video-option-header">Learn To Draw #01 - Sketching Basics + Materials</div>
@@ -9,9 +13,7 @@ export const VideoOption = () => {
                 <li><span className="material-icons-outlined">
                     topic
                 </span><div>Add Playlist</div></li>
-                <li><span className="material-icons-outlined">
-                    thumb_up_alt
-                </span><div>Likes</div></li>
+                <AddLike/>
                 <li><span className="material-icons-outlined">
                     watch_later
                 </span><div>Add to Watch Later</div></li>
@@ -19,8 +21,6 @@ export const VideoOption = () => {
             </ul>
 
         </div>
-        <div className="spacer">
 
-        </div>
     </div>
 }

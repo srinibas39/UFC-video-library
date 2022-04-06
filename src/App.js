@@ -24,7 +24,7 @@ export const App = () => {
      <Route path="*" element={<Error/>}/>
      <Route path="/" element={<Home/>}/>
      <Route path="/explore" element={<Explore/>}/>
-     <Route path="/watch" element={<Watch/>}/>
+     <Route path="/watch/:videoId" element={<Watch/>}/>
      <Route path="/playlist" element={<PlayListPage/>}/>
      <Route path="/watchlater" element={<WatchLaterPage/>}/>
      <Route path="/history" element={<HistoryPage/>}/>
