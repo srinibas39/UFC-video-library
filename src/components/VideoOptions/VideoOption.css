@@ -19,7 +19,8 @@
 
 .video-option-categories{
     list-style: none;
-    display: flex
+    display: flex;
+    position: relative;
 }
 .video-option-categories li{
     margin: 0 1rem;

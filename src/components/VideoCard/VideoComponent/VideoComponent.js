@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { useVideo } from "../../context/VideoContext"
-import { Comment } from "../Comment/Comment"
-import { VideoOption } from "../VideoOptions/VideoOption"
+import { useVideo } from "../../../context/VideoContext"
+import { Comment } from "../../Comment/Comment"
+import { VideoOption } from "../../VideoOptions/VideoOption"
 import "./VideoComponent.css"
 
 export const VideoComponent = () => {
@@ -15,7 +15,7 @@ export const VideoComponent = () => {
     }
 
     const videoItem = getVideo(videoId, allVideos)
-    console.log(videoItem);
+    
 
     return <>
 
