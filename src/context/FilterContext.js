@@ -13,9 +13,9 @@ export const FilterProvider = ({ children }) => {
             case "REMOVE_LIKE":
                 return { ...state, likes: state.likes.filter((el) => el._id !== action.payload._id) }
             case "ADD_PLAYLIST":
-                 return {...state,playlists:[...state.playlists,action.payload]}
+                return { ...state, playlists: [...state.playlists, action.payload] }
             case "UPDATE_ALL_VIDEOS":
-                return {...state,allVideos:[...action.payload]}     
+                return { ...state, allVideos: [...action.payload] }
             default:
                 return { ...state }
         }
@@ -24,7 +24,9 @@ export const FilterProvider = ({ children }) => {
     const [state, dispatch] = useReducer(filterReducer, {
         likes: [],
         playlists: [],
-        allVideos:[]
+        allVideos: [],
+        
+
 
     })
     return <FilterContext.Provider value={{ state, dispatch }}>

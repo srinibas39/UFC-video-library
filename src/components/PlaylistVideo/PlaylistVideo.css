@@ -1,0 +1,18 @@
+.playlistVideo-container{
+    display: flex;
+    font-family: "DIN 2014", sans-serif;
+}
+
+.playlistVideo{
+    width: 89vw;
+}
+
+.playlistVideo h2{
+    margin: 2rem;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
