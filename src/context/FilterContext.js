@@ -5,7 +5,9 @@ import { useReducer } from "react";
 export const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
-
+    const getFilteredVideos=(play)=>{
+        return state.allVideos.filter((ele)=>ele.playlist.includes(play))
+     }
     const filterReducer = (state, action) => {
         switch (action.type) {
             case "ADD_LIKE":
@@ -16,6 +18,7 @@ export const FilterProvider = ({ children }) => {
                 return { ...state, playlists: [...state.playlists, action.payload] }
             case "UPDATE_ALL_VIDEOS":
                 return { ...state, allVideos: [...action.payload] }
+             
             default:
                 return { ...state }
         }
@@ -26,10 +29,11 @@ export const FilterProvider = ({ children }) => {
         playlists: [],
         allVideos: [],
         
+        
 
 
     })
-    return <FilterContext.Provider value={{ state, dispatch }}>
+    return <FilterContext.Provider value={{ state, dispatch,getFilteredVideos }}>
         {children}
     </FilterContext.Provider>
 }
