@@ -30,11 +30,6 @@ export const App = () => {
      <Route path="/history" element={<HistoryPage/>}/>
      <Route path="/likes" element={<LikesPage/>}/>
    </Routes>
-
-  
-   
-   
-
   </>
 }
 

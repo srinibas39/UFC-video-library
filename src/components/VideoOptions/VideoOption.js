@@ -1,7 +1,6 @@
 
 import { AddLike } from "../AddLike/AddLike"
 import { AddPlaylist } from "../AddPlaylist/AddPlayList"
-import { PlaylistModal } from "../PlaylistModal/PlaylistModal"
 import "./VideoOption.css"
 
 export const VideoOption = () => {

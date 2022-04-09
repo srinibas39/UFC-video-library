@@ -4,6 +4,7 @@ import { PlaylistModal } from "../PlaylistModal/PlaylistModal";
 
 export const AddPlaylist = () => {
     const [openPlayListModal, setOpenPlaylistModal] = useState(false);
+   
     return <>
         {
             openPlayListModal && <PlaylistModal setOpenPlaylistModal={setOpenPlaylistModal} />

@@ -11,6 +11,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/HelivOF6vI8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmlnccdGcTIEPBCMQZ0h4Pimy-qQ",
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Soham Shah",
+    playlist:[]
   },
   {
     _id: uuid(),
@@ -18,6 +19,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/MQcXEWPesAw",
     thumbnail: "https://i.ytimg.com/vi/MQcXEWPesAw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjatUoW9YJ6DmVVeXVo_Zj2qJdtA",
     creator: "Sentdex",
+    playlist:[],
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   },
