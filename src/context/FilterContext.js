@@ -18,7 +18,8 @@ export const FilterProvider = ({ children }) => {
                 return { ...state, playlists: [...state.playlists, action.payload] }
             case "UPDATE_ALL_VIDEOS":
                 return { ...state, allVideos: [...action.payload] }
-             
+            case "DELETE_PLAYLIST":
+                return {...state,playlists:state.playlists.filter((el)=>el!==action.payload)}
             default:
                 return { ...state }
         }

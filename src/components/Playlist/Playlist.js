@@ -4,7 +4,7 @@ import { useFilter } from "../../context/FilterContext"
 import "./Playlist.css"
 
 export const Playlist = () => {
-    const { state ,getFilteredVideos} = useFilter();
+    const { state ,dispatch,getFilteredVideos} = useFilter();
     const navigate = useNavigate();
     return <div className="playlist-container">
         <h2>MY PLAYLISTS</h2>
@@ -18,7 +18,7 @@ export const Playlist = () => {
                             <div>{el}</div>
                             <div>{nVideos}</div>
                         </div>
-                        <button><span class="material-icons-outlined">
+                        <button onClick={(e)=>(e.stopPropagation(),dispatch({type:"DELETE_PLAYLIST",payload:el}))}><span class="material-icons-outlined">
                             delete
                         </span></button>
                     </div>
