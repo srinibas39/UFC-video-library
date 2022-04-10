@@ -1,6 +1,7 @@
 
 import { AddLike } from "../AddLike/AddLike"
 import { AddPlaylist } from "../AddPlaylist/AddPlayList"
+import { AddWatchLater } from "../AddWatchlater/AddWatchlater"
 import "./VideoOption.css"
 
 export const VideoOption = () => {
@@ -13,10 +14,8 @@ export const VideoOption = () => {
            
                 <AddPlaylist/>
                 <AddLike/>
-
-                <li><span className="material-icons-outlined">
-                    watch_later
-                </span><div>Add to Watch Later</div></li>
+                <AddWatchLater/>
+               
 
             </ul>
 

@@ -20,7 +20,10 @@ export const FilterProvider = ({ children }) => {
                 return { ...state, allVideos: [...action.payload] }
             case "DELETE_PLAYLIST":
                 return {...state,playlists:state.playlists.filter((el)=>el!==action.payload)}
-                
+            case "ADD_WATCHLATER":
+                return {...state,watchlater:[...state.watchlater,action.payload]}
+            case "REMOVE_WATCHLATER":
+                return {...state,watchlater:state.watchlater.filter((el)=>el._id!==action.payload)}   
             default:
                 return { ...state }
         }
@@ -30,6 +33,7 @@ export const FilterProvider = ({ children }) => {
         likes: [],
         playlists: [],
         allVideos: [],
+        watchlater:[],
         
     })
     return <FilterContext.Provider value={{ state, dispatch,getFilteredVideos }}>

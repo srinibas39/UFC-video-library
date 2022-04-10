@@ -9,7 +9,7 @@ export const AddLike = () => {
     const { videoId } = useParams();
     const { allVideos } = useVideo();;
     const videoItem = allVideos.find((el) => el._id === videoId);
-    const like = state.likes.find((ele) => ele._id === videoId)
+    const like = state.likes.find((ele) => ele._id === videoId);
 
     return <>
         {
