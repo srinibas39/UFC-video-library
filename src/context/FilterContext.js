@@ -24,6 +24,8 @@ export const FilterProvider = ({ children }) => {
                 return {...state,watchlater:[...state.watchlater,action.payload]}
             case "REMOVE_WATCHLATER":
                 return {...state,watchlater:state.watchlater.filter((el)=>el._id!==action.payload)}   
+            case "ADD_HISTORY":
+                return {...state,history:[...state.history,action.payload]}    
             default:
                 return { ...state }
         }
@@ -34,6 +36,7 @@ export const FilterProvider = ({ children }) => {
         playlists: [],
         allVideos: [],
         watchlater:[],
+        history:[]
         
     })
     return <FilterContext.Provider value={{ state, dispatch,getFilteredVideos }}>

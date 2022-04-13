@@ -22,10 +22,6 @@ export const VideoProvider = ({ children }) => {
     })()
   }, [])
 
-
-
-
-
   return <VideoContext.Provider value={{ allVideos, setAllVideos }} >
     {children}
   </VideoContext.Provider>
