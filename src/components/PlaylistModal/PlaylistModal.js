@@ -26,7 +26,7 @@ export const PlaylistModal = ({ setOpenPlaylistModal }) => {
             newVideos.forEach((ele) => {
                 if (ele._id === videoId) {
                     if (!ele.playlist.includes(play)) {
-                        ele.playlist = [...ele.playlist, play]
+                        ele.playlist = [...ele.playlist, play];
                     }
                 }
             })
@@ -37,7 +37,7 @@ export const PlaylistModal = ({ setOpenPlaylistModal }) => {
         dispatch({ type: "UPDATE_ALL_VIDEOS", payload: newAllVideos })
 
     }
-    console.log(newAllVideos);
+
 
 
 
