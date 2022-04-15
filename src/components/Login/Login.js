@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Login = () => {
+    const navigate=useNavigate();
     return <div className="login-container">
         <div className="login">
             <h2>Login</h2>
@@ -20,8 +22,7 @@ export const Login = () => {
                 <a href="#">Forgot Your Password ?</a>
             </div>
             <button className="btn-logins">Login</button>
-            <div className="create-new">
-                <a href="./signup.html" className="link link2"></a>
+            <div className="create-new" onClick={()=>navigate("/signup")}>
                 <p>Create new Account</p>
                 <span className="material-icons"> arrow_forward_ios </span>
             </div>

@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom"
 import "./Signup.css"
 
 export const Signup = () => {
+    const navigate=useNavigate()
     return <div className="signup-container">
         <div className="signup">
             <h2>Sign up</h2>
@@ -27,7 +29,7 @@ export const Signup = () => {
             </div>
 
             <button className="btn-register">Create New Account</button>
-            <div className="account-login">
+            <div className="account-login" onClick={()=>navigate("/login")}>
                 <p>Already have an account</p>
                 <span className="material-icons"> arrow_forward_ios </span>
             </div>
