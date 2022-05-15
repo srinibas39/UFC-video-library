@@ -1,3 +1,20 @@
-## E-Commerce Backend
+# UFC-videolibrary  App
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+## Features
++ Home Page
++ Video Listing Page
++ Playlist Management
++ Like/Dislike
++ Watch Later
++ History
+
+##Tech stack
++ HTML
++ CSS
++ javascript
++ React 
++ UseContext
++ API calls
+
+
+
