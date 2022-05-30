@@ -39,8 +39,14 @@ export const AuthProvider = ({ children }) => {
             console.log(err);
         }
     }
+    const logoutHandler = () => {
+        localStorage.removeItem("login");
+        setUser(null);
+        setToken(null)
+    }
 
-    return <AuthContext.Provider value={{ loginHandler, signupHandler }}>
+
+    return <AuthContext.Provider value={{ loginHandler, signupHandler, logoutHandler }}>
         {children}
     </AuthContext.Provider>
 }
