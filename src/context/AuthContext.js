@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(local?.user);
     const [token, setToken] = useState(local?.token);
 
+
+
     const loginHandler = async (email, password) => {
         try {
             const { data, status } = await LoginServices({ email, password });
@@ -46,7 +48,7 @@ export const AuthProvider = ({ children }) => {
     }
 
 
-    return <AuthContext.Provider value={{ loginHandler, signupHandler, logoutHandler }}>
+    return <AuthContext.Provider value={{ loginHandler, signupHandler, logoutHandler, user, token }}>
         {children}
     </AuthContext.Provider>
 }
