@@ -8,23 +8,27 @@ import { VideoProvider } from "./context/VideoContext";
 import { FilterProvider } from "./context/FilterContext";
 import { AuthProvider } from "./context/AuthContext";
 import { LikeProvider } from "./context/LikeContext";
+import { WatchlaterProvider } from "./context/WatchlaterContext";
 
 // Call make Server
 makeServer();
 
 ReactDOM.render(
+
   <AuthProvider>
-    <LikeProvider>
-      <FilterProvider>
-        <VideoProvider>
-          <BrowserRouter>
-            <React.StrictMode>
-              <App />
-            </React.StrictMode>
-          </BrowserRouter>,
-        </VideoProvider>
-      </FilterProvider>
-    </LikeProvider>
+    <WatchlaterProvider>
+      <LikeProvider>
+        <FilterProvider>
+          <VideoProvider>
+            <BrowserRouter>
+              <React.StrictMode>
+                <App />
+              </React.StrictMode>
+            </BrowserRouter>,
+          </VideoProvider>
+        </FilterProvider>
+      </LikeProvider>
+    </WatchlaterProvider>
   </AuthProvider>,
   document.getElementById("root")
 );
