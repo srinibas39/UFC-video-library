@@ -18,7 +18,7 @@ export const AddLike = ({ video }) => {
     useEffect(() => {
         const videoItem = likes.find((el) => el._id === video._id);
         setVideoItem(videoItem)
-    }, [likes])
+    })
 
     return <>
 

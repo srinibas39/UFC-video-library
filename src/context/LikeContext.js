@@ -1,7 +1,8 @@
-import axios from "axios";
+
 import { createContext, useState } from "react";
 import { useContext } from "react";
 import { AddLike } from "../services/AddLike";
+import { GetLike } from "../services/GetLike";
 import { RemoveLike } from "../services/RemoveLike";
 
 
@@ -29,7 +30,17 @@ export const LikeProvider = ({ children }) => {
         }
     }
 
-    return <LikeContext.Provider value={{ addLike, likes, removeLike }}>
+    const getLike = async (token) => {
+        try {
+            const res = await GetLike(token);
+            setLikes(res.data.likes);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+    return <LikeContext.Provider value={{ addLike, likes, removeLike,getLike }}>
         {children}
     </LikeContext.Provider>
 }
