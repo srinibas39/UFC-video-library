@@ -44,13 +44,13 @@ export const PlaylistModal = ({ setOpenPlaylistModal }) => {
     return <ul className="playlist-modal" >
         <div className="playlist-header">
             <p>Add To Playlist</p>
-            <button onClick={() => setOpenPlaylistModal(false)}><span class="material-icons-outlined">
+            <button onClick={() => setOpenPlaylistModal(false)}><span className="material-icons-outlined">
                 close
             </span></button>
         </div>
         {
             state.playlists && state.playlists.map((el, idx) => {
-                return <li key={idx} onClick={() => handlePlaylist(el)}><span class="material-icons-outlined"  >
+                return <li key={idx} onClick={() => handlePlaylist(el)}><span className="material-icons-outlined"  >
                     add
                 </span>{el}</li>
             })

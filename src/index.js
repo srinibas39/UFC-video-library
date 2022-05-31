@@ -9,6 +9,7 @@ import { FilterProvider } from "./context/FilterContext";
 import { AuthProvider } from "./context/AuthContext";
 import { LikeProvider } from "./context/LikeContext";
 import { WatchlaterProvider } from "./context/WatchlaterContext";
+import { HistoryProvider } from "./context/HistoryContext";
 
 // Call make Server
 makeServer();
@@ -16,19 +17,21 @@ makeServer();
 ReactDOM.render(
 
   <AuthProvider>
-    <WatchlaterProvider>
-      <LikeProvider>
-        <FilterProvider>
-          <VideoProvider>
-            <BrowserRouter>
-              <React.StrictMode>
-                <App />
-              </React.StrictMode>
-            </BrowserRouter>,
-          </VideoProvider>
-        </FilterProvider>
-      </LikeProvider>
-    </WatchlaterProvider>
+    <HistoryProvider>
+      <WatchlaterProvider>
+        <LikeProvider>
+          <FilterProvider>
+            <VideoProvider>
+              <BrowserRouter>
+                <React.StrictMode>
+                  <App />
+                </React.StrictMode>
+              </BrowserRouter>,
+            </VideoProvider>
+          </FilterProvider>
+        </LikeProvider>
+      </WatchlaterProvider>
+    </HistoryProvider>
   </AuthProvider>,
   document.getElementById("root")
 );

@@ -7,16 +7,7 @@ import "./PlaylistVideo.css"
 export const PlaylistVideo = () => {
     const { play } = useParams();
     const { dispatch, getFilteredVideos } = useFilter();
-
-
-
-
     const filteredVideos = getFilteredVideos(play);
-
-
-
-
-
     return <div className="playlistVideo-container">
         <Categories />
         <div className="playlistVideo">
