@@ -1,28 +1,39 @@
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useAuth } from "../../context/AuthContext";
 import { useFilter } from "../../context/FilterContext";
+import { useLike } from "../../context/LikeContext";
 import { useVideo } from "../../context/VideoContext";
 import "../VideoOptions/VideoOption.css"
 
 
-export const AddLike = () => {
-    const { state, dispatch } = useFilter()
-    const { videoId } = useParams();
-    const { allVideos } = useVideo();;
-    const videoItem = allVideos.find((el) => el._id === videoId);
-    const like = state.likes.find((ele) => ele._id === videoId);
+export const AddLike = ({ video }) => {
+
+
+    const { addLike, likes, removeLike } = useLike();
+    const { token } = useAuth();
+    const [videoItem, setVideoItem] = useState([]);
+
+
+    useEffect(() => {
+        const videoItem = likes.find((el) => el._id === video._id);
+        setVideoItem(videoItem)
+    }, [likes])
 
     return <>
+
         {
-            like ? <li><span className={"material-icons like "}
-                onClick={() => dispatch({ type: "REMOVE_LIKE", payload: videoItem })}>
+            videoItem ? <li><span className={"material-icons like "}
+                onClick={() => removeLike(token,video._id)}>
                 thumb_up_alt
             </span><div>Likes</div></li> :
-            <li><span className={"material-icons"}
-                    onClick={() => dispatch({ type: "ADD_LIKE", payload: videoItem })}>
+                <li><span className={"material-icons"}
+                    onClick={() => addLike({ token, video })}>
                     thumb_up_alt
-            </span><div>Likes</div></li>
-
+                </span><div>Likes</div></li>
         }
+
+
     </>
 
 

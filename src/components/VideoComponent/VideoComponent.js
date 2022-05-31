@@ -1,25 +1,15 @@
 import { useParams } from "react-router-dom"
 import { useVideo } from "../../context/VideoContext";
 import { Comment } from "../Comment/Comment";
-
 import "./VideoComponent.css";
 import Iframe from 'react-iframe-click';
 import { useEffect, useState } from "react";
-
-export const VideoComponent = () => {
-    const { videoId } = useParams();
-    const { getSingleVideo } = useVideo();
-    const [videoItem, setVideoItem] = useState({})
+import { useFilter } from "../../context/FilterContext";
 
 
-    useEffect(() => {
-        (async () => {
-            const videoItem = await getSingleVideo(videoId);
-            setVideoItem(videoItem)
-        })()
+export const VideoComponent = ({ videoItem }) => {
 
-    }, [])
-
+    const { dispatch } = useFilter()
 
     return <>
 
