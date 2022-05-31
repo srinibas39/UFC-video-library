@@ -32,9 +32,9 @@
     align-items: center;
 }
 .like{
-    color: deeppink;
+    color: var(--secondary-color);
 }
 
 .watch{
-    color:#d20a0a;
+    color:var(--secondary-color);
 }

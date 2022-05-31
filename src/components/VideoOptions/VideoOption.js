@@ -14,7 +14,7 @@ export const VideoOption = ({ videoItem }) => {
 
                 <AddPlaylist />
                 <AddLike video={videoItem} />
-                <AddWatchLater />
+                <AddWatchLater video={videoItem} />
 
             </ul>
 

@@ -12,7 +12,7 @@ export const AddLike = ({ video }) => {
 
     const { addLike, likes, removeLike } = useLike();
     const { token } = useAuth();
-    const [videoItem, setVideoItem] = useState([]);
+    const [videoItem, setVideoItem] = useState({});
 
 
     useEffect(() => {
@@ -26,11 +26,11 @@ export const AddLike = ({ video }) => {
             videoItem ? <li><span className={"material-icons like "}
                 onClick={() => removeLike(token,video._id)}>
                 thumb_up_alt
-            </span><div>Likes</div></li> :
+            </span></li> :
                 <li><span className={"material-icons"}
                     onClick={() => addLike({ token, video })}>
                     thumb_up_alt
-                </span><div>Likes</div></li>
+                </span></li>
         }
 
 

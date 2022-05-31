@@ -11,6 +11,6 @@ export const AddPlaylist = () => {
         }
         <li onClick={() => setOpenPlaylistModal(!openPlayListModal)}><span className="material-icons-outlined">
             topic
-        </span><div>Add Playlist</div></li>
+        </span></li>
     </>
 }
