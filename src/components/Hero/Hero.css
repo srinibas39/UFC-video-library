@@ -1,6 +1,6 @@
 .hero{
     background-image: url("https://assets-global.website-files.com/5cf5a026c1709374131c1228/5d112eba975a6d64c7a47ff6_5d00170711b2db4a660014fb_hero1edit.jpeg");
-    height: 88vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
