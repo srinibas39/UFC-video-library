@@ -1,20 +1,39 @@
-
-
-.likes-container{
-    display: flex;
-    font-family: "DIN 2014", sans-serif;
+.likes-container {
+  display: flex;
+  font-family: "DIN 2014", sans-serif;
 }
 
-.likes{
-    width: 89vw;
+.likes {
+  width: 89vw;
 }
 
-.likes h2{
-    margin: 2rem;
+.likes h2 {
+  margin: 2rem;
 }
 
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.likes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes-header button {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 5rem;
+  border: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background: #fff;
+  cursor: pointer;
+}
+
+.likes-header button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
 }

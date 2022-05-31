@@ -8,21 +8,22 @@ import "./Like.css"
 
 export const Like = () => {
 
-    const { likes, getLike } = useLike();
+    const { likes, removeLike } = useLike();
     const { token } = useAuth();
 
-    useEffect(() => {
-        (
-            async() => {
-                const res=await getLike(token); 
-            }
-        )()
-    }, [])
+    const handleClearAll = () => {
+        likes.forEach(async (video) => {
+            const res = await removeLike(token, video._id);
+        })
+    }
 
     return <div className="likes-container">
         <Categories />
         <div className="likes">
-            <h2>LIKES</h2>
+            <div className="likes-header">
+                <h2>LIKES</h2>
+                <button onClick={handleClearAll}>Clear All</button>
+            </div>
             <div className="card-container">
                 {
                     likes && likes.map((el) => {

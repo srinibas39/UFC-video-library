@@ -31,7 +31,7 @@ export const WatchlaterProvider = ({ children }) => {
             console.log(err);
         }
     }
-    return <WatchlaterContext.Provider value={{ addWatchlater, watchlater, removeWatchlater,setWatchlater }}>
+    return <WatchlaterContext.Provider value={{ addWatchlater, watchlater, removeWatchlater}}>
         {children}
     </WatchlaterContext.Provider>
 }

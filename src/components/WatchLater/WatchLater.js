@@ -6,7 +6,7 @@ import { VideoCard } from "../VideoCard/VideoCard"
 import "./WatchLater.css"
 
 export const WatchLater = () => {
-    const { watchlater, setWatchlater, removeWatchlater } = useWatchlater();
+    const { watchlater, removeWatchlater } = useWatchlater();
     const { token } = useAuth();
 
     const handleClearAll = () => {
