@@ -1,8 +1,6 @@
-import { useParams } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
-import { useFilter } from "../../context/FilterContext"
-import { useVideo } from "../../context/VideoContext";
 import { useWatchlater } from "../../context/WatchlaterContext";
 import "../WatchLater/WatchLater.css"
 

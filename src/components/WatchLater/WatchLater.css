@@ -1,18 +1,39 @@
-.watchlater-container{
-    display: flex;
-    font-family: "DIN 2014", sans-serif;
+.watchlater-container {
+  display: flex;
+  font-family: "DIN 2014", sans-serif;
 }
 
-.watchlater{
-    width: 89vw;
+.watchlater {
+  width: 89vw;
 }
 
-.watchlater h2{
-    margin: 2rem;
+.watchlater h2 {
+  margin: 2rem;
 }
 
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.watchlater-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlater-header button {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 5rem;
+  border: 3px solid var(--secondary-color);
+  color:var(--secondary-color);
+  background: #fff;
+  cursor: pointer;
+}
+
+.watchlater-header button:hover{
+    background-color: var(--secondary-color);
+    color:#fff
 }

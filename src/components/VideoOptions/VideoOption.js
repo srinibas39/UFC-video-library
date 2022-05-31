@@ -9,7 +9,7 @@ export const VideoOption = ({ videoItem }) => {
 
     return <div className="video-option-container">
         <div className="video-option">
-            <div className="video-option-header">Learn To Draw #01 - Sketching Basics + Materials</div>
+            <div className="video-option-header">{videoItem.title}</div>
             <ul className="video-option-categories">
 
                 <AddPlaylist />
