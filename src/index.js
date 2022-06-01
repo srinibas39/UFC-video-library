@@ -10,6 +10,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { LikeProvider } from "./context/LikeContext";
 import { WatchlaterProvider } from "./context/WatchlaterContext";
 import { HistoryProvider } from "./context/HistoryContext";
+import { PlaylistProvider } from "./context/PlaylistContext";
 
 // Call make Server
 makeServer();
@@ -17,21 +18,23 @@ makeServer();
 ReactDOM.render(
 
   <AuthProvider>
-    <HistoryProvider>
-      <WatchlaterProvider>
-        <LikeProvider>
-          <FilterProvider>
-            <VideoProvider>
-              <BrowserRouter>
-                <React.StrictMode>
-                  <App />
-                </React.StrictMode>
-              </BrowserRouter>,
-            </VideoProvider>
-          </FilterProvider>
-        </LikeProvider>
-      </WatchlaterProvider>
-    </HistoryProvider>
+    <PlaylistProvider>
+      <HistoryProvider>
+        <WatchlaterProvider>
+          <LikeProvider>
+            <FilterProvider>
+              <VideoProvider>
+                <BrowserRouter>
+                  <React.StrictMode>
+                    <App />
+                  </React.StrictMode>
+                </BrowserRouter>,
+              </VideoProvider>
+            </FilterProvider>
+          </LikeProvider>
+        </WatchlaterProvider>
+      </HistoryProvider>
+    </PlaylistProvider>
   </AuthProvider>,
   document.getElementById("root")
 );
