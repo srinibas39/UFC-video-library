@@ -21,7 +21,7 @@ export const Watch = () => {
 
     return <>
         <NavBar />
-        <VideoComponent videoItem={videoItem} />
+        <VideoComponent video={videoItem} />
         <VideoOption videoItem={videoItem} />
     </>
 }

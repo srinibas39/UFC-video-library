@@ -2,7 +2,7 @@
  * Videos Database can be added here.
  * You can add videos of your wish with different attributes
  * */
-import { v4 as uuid } from "uuid";
+
 export const videos = [
   {
     _id: "3d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -11,7 +11,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/HelivOF6vI8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmlnccdGcTIEPBCMQZ0h4Pimy-qQ",
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
 
   }, {
     _id: "4d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -19,8 +19,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/MQcXEWPesAw",
     thumbnail: "https://i.ytimg.com/vi/MQcXEWPesAw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjatUoW9YJ6DmVVeXVo_Zj2qJdtA",
     creator: "Sentdex",
-    playlist: [],
-
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "5d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -28,7 +27,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/9V03KpJBEaw",
     thumbnail: "https://i.ytimg.com/vi/9V03KpJBEaw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJXwtLRNkypqk1KpnN5nSSYMMMIw",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "6d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -36,7 +35,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/DyvjV3Lt8Pw",
     thumbnail: "https://i.ytimg.com/vi/DyvjV3Lt8Pw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYL1CtslYP3CgpgkpNOZtYaNELWw",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "7d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -44,7 +43,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/vio-IeNBCvk",
     thumbnail: "https://i.ytimg.com/vi/vio-IeNBCvk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZtF1lASi64A6VloNOF7MrIjvb8w",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "8d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -52,7 +51,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/NR3SEWZ481E",
     thumbnail: "https://i.ytimg.com/vi/NR3SEWZ481E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUnM7BZsfZVF24HIsO9rqptvD2zA",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "9d3ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -60,7 +59,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/DpLaqnwFQEY",
     thumbnail: "https://i.ytimg.com/vi/DpLaqnwFQEY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVwDl2LvRmVq2Jj6NJ1ZaqssDc8w",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "103ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -68,7 +67,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/Gc5eZhgEb1c",
     thumbnail: "https://i.ytimg.com/vi/Gc5eZhgEb1c/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBskgEB29hPQQzvgYqPcLwg9nxKHg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "113ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -76,7 +75,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/zea_QpSpfGs",
     thumbnail: "https://i.ytimg.com/vi/zea_QpSpfGs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdFxJl9PXbrkuVN7I19BdWMNkyqg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "123ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -84,7 +83,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/oCEYKYWsQEg",
     thumbnail: "https://i.ytimg.com/vi/oCEYKYWsQEg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEh-n0y2mhyn1n6rZtOGX7Gh-HKw",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "133ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -92,7 +91,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/EGi-rB1jCCY",
     thumbnail: "https://i.ytimg.com/vi/EGi-rB1jCCY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQgm3N8P_3739QCTqbaaRC3SY4Jw",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "143ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -100,7 +99,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/2N_7pgW0vE4",
     thumbnail: "https://i.ytimg.com/vi/2N_7pgW0vE4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCxbTCOhJYlFyApI50hsDxRe11uNg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "153ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -108,7 +107,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/Ky2srpDCwk8",
     thumbnail: "https://i.ytimg.com/vi/Ky2srpDCwk8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVajvC5P1uZUZqFYIMMtFxGlNIeg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "163ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -116,7 +115,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/H0lwHFgYHXk",
     thumbnail: "https://i.ytimg.com/vi/H0lwHFgYHXk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHbQPdlTONU4jmTEtFNLsvvUQgtg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "173ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -124,7 +123,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/scB4HhWe3_o",
     thumbnail: "https://i.ytimg.com/vi/scB4HhWe3_o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAd6pwyGy6OvzlLfLWRa28IvQssrA",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "183ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -132,7 +131,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/jDRSkTn4OZE",
     thumbnail: "https://i.ytimg.com/vi/jDRSkTn4OZE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLoy0HvHK0H56ifL1qivG2mmvB8g",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "193ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -140,7 +139,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/DH6mHW8_sYk",
     thumbnail: "https://i.ytimg.com/vi/DH6mHW8_sYk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCce2gDkxeInhAsjZ2nEF33nl-l5A",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "203ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -148,7 +147,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/lIwjvbj2Wcc",
     thumbnail: "https://i.ytimg.com/vi/lIwjvbj2Wcc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmOsccLd2T2QOBlq6JaASZ1u_xmg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "213ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -156,7 +155,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/8_pMTmjDbnY",
     thumbnail: "https://i.ytimg.com/vi/8_pMTmjDbnY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbnWQ24kL9aJdoPnQ9yx5wMZTmAA",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "223ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -164,7 +163,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/8_pMTmjDbnY",
     thumbnail: "https://i.ytimg.com/vi/8_pMTmjDbnY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbnWQ24kL9aJdoPnQ9yx5wMZTmAA",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "233ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -172,7 +171,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/rAnLPKGbytU",
     thumbnail: "https://i.ytimg.com/vi/rAnLPKGbytU/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB66kko1fxhjRhD_3tGQMzoLEfvzg",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "243ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -180,7 +179,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/Hk3X_QNWSd8",
     thumbnail: "https://i.ytimg.com/vi/Hk3X_QNWSd8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAT8ccag8nLBLirPyVx_VKaIx5xkQ",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "253ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -188,7 +187,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/8TpUS1IKwvE",
     thumbnail: "https://i.ytimg.com/vi/8TpUS1IKwvE/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtKlqCtzTGTE_Xv-st5kla3Hjh_A",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "263ef9d4-6a56-4dae-a155-3b4a7554242c",
@@ -196,7 +195,7 @@ export const videos = [
     video: "https://www.youtube.com/embed/yZKhfZ25L4o",
     thumbnail: "https://i.ytimg.com/vi/yZKhfZ25L4o/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALYGYscLma_lz33X-b-mKYFR2FVA",
     creator: "Sentdex",
-    playlist: [],
+    option: [],
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   },
 ];

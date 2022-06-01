@@ -1,21 +1,25 @@
 
 import { Comment } from "../Comment/Comment";
 import "./VideoComponent.css";
-import Iframe from 'react-iframe-click';
-import { useFilter } from "../../context/FilterContext";
+import { useHistory } from "../../context/HistoryContext";
+import { useAuth } from "../../context/AuthContext";
+import React from 'react'
+import ReactPlayer from 'react-player'
 
 
 
-export const VideoComponent = ({ videoItem }) => {
+export const VideoComponent = ({ video }) => {
 
-    const { dispatch } = useFilter()
+    const { addHistory } = useHistory();
+    const { token } = useAuth();
+
 
     return <>
 
         <div className="video-player-container">
             <div className="video-player">
                 <div className="video-iframe">
-                    <Iframe src={videoItem && videoItem.video} onInferredClick={() => dispatch({ type: "ADD_HISTORY", payload: videoItem })} ></Iframe>
+                    <ReactPlayer url={video && video.video} height="100%" width="100%" onStart={() => addHistory(token, video)} />
                 </div>
                 <Comment />
             </div>

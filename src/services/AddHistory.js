@@ -5,8 +5,7 @@ export const AddHistory = (token, video) => {
     return axios.post("/api/user/history",
         { video },
         {
-            headers:
-            {
+            headers:{
                 authorization: token
             }
         })

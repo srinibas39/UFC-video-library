@@ -8,11 +8,12 @@ export const HistoryContext = createContext();
 
 export const HistoryProvider = ({ children }) => {
 
-    const [history, setHistory] = useHistory();
+    const [history, setHistory] = useState([]);
     const addHistory = async (token, video) => {
         try {
             const res = await AddHistory(token, video);
-            setHistory(res.data.history)
+            setHistory(res.data.history);
+
         }
         catch (err) {
             console.log(err);
@@ -40,4 +41,4 @@ export const HistoryProvider = ({ children }) => {
     </HistoryContext.Provider>
 }
 
-export const useContext = () => useContext(HistoryContext);
+export const useHistory = () => useContext(HistoryContext);

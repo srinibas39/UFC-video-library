@@ -21,17 +21,17 @@ export const WatchlaterProvider = ({ children }) => {
             console.log(err);
         }
     }
-    const removeWatchlater =async (token, videoId) => {
+    const removeWatchlater = async (token, videoId) => {
         try {
             const res = await RemoveWatchlater(token, videoId);
             setWatchlater(res.data.watchlater)
-            
+
         }
         catch (err) {
             console.log(err);
         }
     }
-    return <WatchlaterContext.Provider value={{ addWatchlater, watchlater, removeWatchlater}}>
+    return <WatchlaterContext.Provider value={{ addWatchlater, watchlater, removeWatchlater }}>
         {children}
     </WatchlaterContext.Provider>
 }
