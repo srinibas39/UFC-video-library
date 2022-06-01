@@ -13,13 +13,12 @@ export const VideoComponent = ({ video }) => {
     const { addHistory } = useHistory();
     const { token } = useAuth();
 
-
     return <>
 
         <div className="video-player-container">
             <div className="video-player">
                 <div className="video-iframe">
-                    <ReactPlayer url={video && video.video} height="100%" width="100%" onStart={() => addHistory(token, video)} />
+                    <ReactPlayer url={video && video.video} controls height="100%" width="100%" onStart={() => addHistory(token, video)} />
                 </div>
                 <Comment />
             </div>

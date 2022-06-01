@@ -31,6 +31,7 @@ export const HistoryProvider = ({ children }) => {
     const removeAllHistory = async (token) => {
         try {
             const res = await RemoveAllHistory(token);
+            setHistory(res.data.history)
         }
         catch (err) {
             console.log(err);
