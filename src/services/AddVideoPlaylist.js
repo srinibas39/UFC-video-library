@@ -3,12 +3,11 @@
 import axios from "axios"
 
 
-export const AddVideoPlaylist = (token, video, playlistId) => {
+export const AddVideoPlaylist = (token, playlistId, video) => {
     return axios.post(`/api/user/playlists/${playlistId}`,
         { video },
         {
-            headers:
-            {
+            headers: {
                 authorization: token
             }
         })

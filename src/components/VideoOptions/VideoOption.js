@@ -12,7 +12,7 @@ export const VideoOption = ({ videoItem }) => {
             <div className="video-option-header">{videoItem.title}</div>
             <ul className="video-option-categories">
 
-                <AddPlaylist />
+                <AddPlaylist video={videoItem} />
                 <AddLike video={videoItem} />
                 <AddWatchLater video={videoItem} />
 

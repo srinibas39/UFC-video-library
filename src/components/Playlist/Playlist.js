@@ -1,24 +1,31 @@
 import { useNavigate } from "react-router-dom";
-import { useFilter } from "../../context/FilterContext"
+import { usePlaylist } from "../../context/PlaylistContext";
+import { useEffect } from "react";
 
 import "./Playlist.css"
+import { useAuth } from "../../context/AuthContext";
 
 export const Playlist = () => {
-    const { state ,dispatch,getFilteredVideos} = useFilter();
+    const { playlists, getAllPlaylists, removePlaylist } = usePlaylist();
+
     const navigate = useNavigate();
+    const { token } = useAuth()
+
+    useEffect(() => {
+        getAllPlaylists(token);
+    }, [])
     return <div className="playlist-container">
         <h2>MY PLAYLISTS</h2>
         <div className="playlists">
             {
-                state.playlists && state.playlists.map((el, idx) => {
-                    const filteredVideos=getFilteredVideos(el);
-                    const nVideos=filteredVideos.length
-                    return <div key={idx} className="playlist" onClick={() => navigate(`/pvideo/${el}`)}>
+                playlists && playlists.map((playlist) => {
+
+                    return <div key={playlist._id} className="playlist" onClick={() => navigate(`/pvideo/${playlist}`)}>
                         <div className="playlist-text">
-                            <div>{el}</div>
-                            <div>{nVideos}</div>
+                            <div>{playlist.playlistName}</div>
+                            <div>{playlist.videos.length}</div>
                         </div>
-                        <button onClick={(e)=>(e.stopPropagation(),dispatch({type:"DELETE_PLAYLIST",payload:el}))}><span class="material-icons-outlined">
+                        <button onClick={() => removePlaylist(token, playlist._id)}><span className="material-icons-outlined">
                             delete
                         </span></button>
                     </div>

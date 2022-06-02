@@ -1,5 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import { AddPlaylist } from "../services/AddPlaylist";
+import { AddVideoPlaylist } from "../services/AddVideoPlaylist";
+import { GetAllPlaylists } from "../services/GetAllPlaylists";
+import { RemovePlaylist } from "../services/RemovePlaylist";
 import { RemoveVideoPlaylist } from "../services/RemoveVideoPlaylist";
 
 
@@ -32,24 +35,44 @@ export const PlaylistProvider = ({ children }) => {
     const addVideoPlaylist = async (token, playlistId, video) => {
         try {
             const res = await AddVideoPlaylist(token, playlistId, video);
-            setPlaylists(res.data.playlists);
+
         }
         catch (err) {
             console.log(err);
         }
     }
 
-    const removeVideoPlaylist = async(token, playlistId, videoId) => {
+    const removeVideoPlaylist = async (token, playlistId, videoId) => {
         try {
             const res = await RemoveVideoPlaylist(token, playlistId, videoId);
-            setPlaylists(res.data.playlists);
+
         }
         catch (err) {
             console.log(err);
         }
     }
 
-    return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist,playlists }}>
+    const getAllPlaylists = async (token) => {
+        try {
+            const res = await GetAllPlaylists(token);
+            setPlaylists(res.data.playlists)
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    const getVideoPlaylist = async (token, playlistId) => {
+        try {
+            const res = await getVideoPlaylist(token, playlistId);
+            console.log(res);
+        }
+        catch (err) {
+            console.log(error);
+        }
+    }
+
+    return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist, playlists, getAllPlaylists }}>
         {children}
     </PlaylistContext.Provider>
 }
