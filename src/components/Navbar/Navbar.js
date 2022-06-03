@@ -6,9 +6,14 @@ import { useState, useEffect } from "react";
 
 export const NavBar = () => {
     const navigate = useNavigate();
-    const { logoutHandler } = useAuth();
-    const [logged, setLogged] = useState(true);
+    const { logoutHandler, token } = useAuth();
+    const [logged, setLogged] = useState(false);
 
+    useEffect(() => {
+        if (token) {
+            setLogged(true)
+        }
+    }, [token])
 
 
     return <nav className="navbar">
@@ -34,8 +39,8 @@ export const NavBar = () => {
             <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>ALL PLAYLIST</li></NavLink>
             {
                 logged ? <li><button className="btn-signup" onClick={() => (logoutHandler(), setLogged(false))}>LOGOUT</button></li> :
-                    <><li><button className="btn-login" onClick={() => (navigate("/login"), setLogged(true))}>LOG IN</button></li>
-                        <li><button className="btn-signup" onClick={() => (navigate("/signup"), setLogged(true))}>SIGN UP</button></li></>
+                    <><li><button className="btn-login" onClick={() => (navigate("/login"))}>LOG IN</button></li>
+                        <li><button className="btn-signup" onClick={() => (navigate("/signup"))}>SIGN UP</button></li></>
             }
 
 
