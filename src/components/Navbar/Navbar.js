@@ -1,8 +1,16 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import "./Navbar.css"
+import { useAuth } from "../../context/AuthContext";
+import "./Navbar.css";
+import { useState, useEffect } from "react";
+
 
 export const NavBar = () => {
     const navigate = useNavigate();
+    const { logoutHandler } = useAuth();
+    const [logged, setLogged] = useState(true);
+
+
+
     return <nav className="navbar">
         <div className="svg" onClick={() => navigate("/")}>
 
@@ -24,8 +32,12 @@ export const NavBar = () => {
 
             <NavLink to="/explore" className={({ isActive }) => isActive ? "link-active" : "link-not-active"} ><li>EXPLORE</li></NavLink>
             <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>ALL PLAYLIST</li></NavLink>
-            <li><button className="btn-login" onClick={() => navigate("/login")}>LOG IN</button></li>
-            <li><button className="btn-signup" onClick={() => navigate("/signup")}>SIGN UP</button></li>
+            {
+                logged ? <li><button className="btn-signup" onClick={() => (logoutHandler(), setLogged(false))}>LOGOUT</button></li> :
+                    <><li><button className="btn-login" onClick={() => (navigate("/login"), setLogged(true))}>LOG IN</button></li>
+                        <li><button className="btn-signup" onClick={() => (navigate("/signup"), setLogged(true))}>SIGN UP</button></li></>
+            }
+
 
         </ul>
 

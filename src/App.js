@@ -14,9 +14,12 @@ import { LikesPage } from "./pages/LikesPage";
 import { PlaylistVideoPage } from "./pages/PlaylistVideoPage";
 import { LoginPage } from "./pages/LoginPage";
 import { SignupPage } from "./pages/SignupPage";
+import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
+import { useAuth } from "./context/AuthContext";
 
 
 export const App = () => {
+  const { token } = useAuth()
   return <>
     <Routes>
       <Route path="*" element={<Error />} />
@@ -24,7 +27,9 @@ export const App = () => {
       <Route path="/explore" element={<Explore />} />
       <Route path="/watch/:videoId" element={<Watch />} />
       <Route path="/playlist" element={<PlayListPage />} />
-      <Route path="/watchlater" element={<WatchLaterPage />} />
+      <Route path="/watchlater" element={<PrivateRoute token={token}>
+        <WatchLaterPage />
+      </PrivateRoute>} />
       <Route path="/history" element={<HistoryPage />} />
       <Route path="/likes" element={<LikesPage />} />
       <Route path="/playlist/:playlistId" element={<PlaylistVideoPage />} />
