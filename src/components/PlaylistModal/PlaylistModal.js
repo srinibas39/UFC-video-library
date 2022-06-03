@@ -50,7 +50,7 @@ export const PlaylistModal = ({ setOpenPlaylistModal, video }) => {
 
             <div className="playlist-input">
                 <input value={playlistName} onChange={(e) => setPlaylistName(e.target.value)} placeholder="Type your playlist"></input>
-                <button onClick={() => (addPlaylist(token, { playlistName }), setPlaylistName(""))}>Add</button>
+                <button onClick={() =>(playlistName.trim().length && addPlaylist(token, { playlistName }), setPlaylistName(""))}>Add</button>
             </div>
         </ul>
     </div>
