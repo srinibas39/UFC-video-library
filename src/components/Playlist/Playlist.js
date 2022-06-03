@@ -1,26 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { usePlaylist } from "../../context/PlaylistContext";
-import { useEffect } from "react";
-
-import "./Playlist.css"
-import { useAuth } from "../../context/AuthContext";
+import "./Playlist.css";
 
 export const Playlist = () => {
-    const { playlists, getAllPlaylists, removePlaylist } = usePlaylist();
+    const { playlists, removePlaylist } = usePlaylist();
 
     const navigate = useNavigate();
-    const { token } = useAuth()
-
-    useEffect(() => {
-        getAllPlaylists(token);
-    }, [])
+    
     return <div className="playlist-container">
         <h2>MY PLAYLISTS</h2>
         <div className="playlists">
             {
                 playlists && playlists.map((playlist) => {
 
-                    return <div key={playlist._id} className="playlist" onClick={() => navigate(`/pvideo/${playlist}`)}>
+                    return <div key={playlist._id} className="playlist" onClick={() => navigate(`/playlist/${playlist._id}`)}>
                         <div className="playlist-text">
                             <div>{playlist.playlistName}</div>
                             <div>{playlist.videos.length}</div>

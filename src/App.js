@@ -27,7 +27,7 @@ export const App = () => {
       <Route path="/watchlater" element={<WatchLaterPage />} />
       <Route path="/history" element={<HistoryPage />} />
       <Route path="/likes" element={<LikesPage />} />
-      <Route path="/pvideo/:play" element={<PlaylistVideoPage />} />
+      <Route path="/playlist/:playlistId" element={<PlaylistVideoPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
     </Routes>

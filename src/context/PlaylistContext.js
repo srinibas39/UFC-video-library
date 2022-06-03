@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { AddPlaylist } from "../services/AddPlaylist";
 import { AddVideoPlaylist } from "../services/AddVideoPlaylist";
 import { GetAllPlaylists } from "../services/GetAllPlaylists";
+import { GetPlaylistVideos } from "../services/GetPlaylistVideos";
 import { RemovePlaylist } from "../services/RemovePlaylist";
 import { RemoveVideoPlaylist } from "../services/RemoveVideoPlaylist";
 
@@ -11,6 +12,7 @@ export const PlaylistContext = createContext();
 export const PlaylistProvider = ({ children }) => {
 
     const [playlists, setPlaylists] = useState([])
+    const [playlist, setPlaylist] = useState({})
 
     const addPlaylist = async (token, playlist) => {
         try {
@@ -35,6 +37,7 @@ export const PlaylistProvider = ({ children }) => {
     const addVideoPlaylist = async (token, playlistId, video) => {
         try {
             const res = await AddVideoPlaylist(token, playlistId, video);
+            setPlaylist(res.data.playlist)
 
         }
         catch (err) {
@@ -45,7 +48,7 @@ export const PlaylistProvider = ({ children }) => {
     const removeVideoPlaylist = async (token, playlistId, videoId) => {
         try {
             const res = await RemoveVideoPlaylist(token, playlistId, videoId);
-
+            setPlaylist(res.data.playlist)
         }
         catch (err) {
             console.log(err);
@@ -62,17 +65,17 @@ export const PlaylistProvider = ({ children }) => {
         }
     }
 
-    const getVideoPlaylist = async (token, playlistId) => {
+    const getPlaylistVideos = async (token, playlistId) => {
         try {
-            const res = await getVideoPlaylist(token, playlistId);
-            console.log(res);
+            const res = await GetPlaylistVideos(token, playlistId);
+            setPlaylist(res.data.playlist)
         }
-        catch (err) {
+        catch (error) {
             console.log(error);
         }
     }
 
-    return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist, playlists, getAllPlaylists }}>
+    return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist, playlists, getAllPlaylists, getPlaylistVideos, playlist, setPlaylists }}>
         {children}
     </PlaylistContext.Provider>
 }
