@@ -7,11 +7,16 @@ export const Signup = () => {
     const navigate = useNavigate();
     const [form, setForm] = useState({ email: "", password: "", firstName: "", lastName: "" });
     const { signupHandler } = useAuth();
-    
+
 
     const handleSignup = () => {
-        signupHandler(form.email, form.password, form.firstName, form.lastName);
-        navigate("/explore")
+        if (form.email.trim().length && form.password.trim().length && form.firstName.trim().length && form.lastName.trim().length) {
+            signupHandler(form.email, form.password, form.firstName, form.lastName);
+            navigate("/explore")
+        }
+        else{
+            console.log("plase fill up the sign up form");
+        }
     }
 
     return <div className="signup-container">

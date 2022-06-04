@@ -17,8 +17,14 @@ export const Login = () => {
     }, [token])
 
     const handleLogin = () => {
-        loginHandler(form.email, form.password);
-        navigate("/explore")
+        if(form.email.trim().length && form.password.trim().length){
+            loginHandler(form.email, form.password);
+            navigate("/explore")
+
+        }
+        else{
+            console.log("plase fill up the login form");
+        }
     }
 
     const handleGuestLogin = () => {
