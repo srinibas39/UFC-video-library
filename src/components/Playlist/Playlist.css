@@ -13,6 +13,7 @@
     align-items: center;
     padding: 1rem;
     box-shadow: 0px 0px 10px 4px #aaa;
+    cursor: pointer;
 }
 .playlist-text{
     height: 100%;

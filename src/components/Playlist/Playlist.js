@@ -8,6 +8,7 @@ export const Playlist = () => {
     const { playlists, removePlaylist } = usePlaylist();
     const { token } = useAuth();
     const navigate = useNavigate();
+    
 
     return <div className="playlist-container">
         <h2>MY PLAYLISTS</h2>
@@ -15,7 +16,7 @@ export const Playlist = () => {
             {
                 playlists && playlists.map((playlist) => {
 
-                    return <div key={playlist._id} className="playlist" onClick={() => navigate(`/playlist/${playlist._id}`)}>
+                    return <div key={playlist._id} className="playlist" onClick={() =>playlist.videos.length && navigate(`/playlist/${playlist._id}`)}>
                         <div className="playlist-text">
                             <div>{playlist.playlistName}</div>
                             <div>{playlist.videos.length}</div>

@@ -68,6 +68,7 @@ export const PlaylistProvider = ({ children }) => {
     const getPlaylistVideos = async (token, playlistId) => {
         try {
             const res = await GetPlaylistVideos(token, playlistId);
+            console.log(res);
             setPlaylist(res.data.playlist)
         }
         catch (error) {
@@ -75,7 +76,7 @@ export const PlaylistProvider = ({ children }) => {
         }
     }
 
-    return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist, playlists, getAllPlaylists, getPlaylistVideos, playlist, setPlaylists }}>
+    return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist, playlists, getAllPlaylists, getPlaylistVideos, playlist, setPlaylists,setPlaylist }}>
         {children}
     </PlaylistContext.Provider>
 }
