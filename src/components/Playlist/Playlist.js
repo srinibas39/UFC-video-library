@@ -8,15 +8,23 @@ export const Playlist = () => {
     const { playlists, removePlaylist } = usePlaylist();
     const { token } = useAuth();
     const navigate = useNavigate();
-    
+
+    const handleClearAll = () => {
+        playlists.forEach((play)=>{
+            removePlaylist(token,play._id)
+        })
+    }
 
     return <div className="playlist-container">
-        <h2>MY PLAYLISTS</h2>
+        <div className="likes-header">
+            <h2>PLAYLISTS</h2>
+            <button onClick={handleClearAll}>Clear All</button>
+        </div>
         <div className="playlists">
             {
                 playlists && playlists.map((playlist) => {
 
-                    return <div key={playlist._id} className="playlist" onClick={() =>playlist.videos.length && navigate(`/playlist/${playlist._id}`)}>
+                    return <div key={playlist._id} className="playlist" onClick={() => playlist.videos.length && navigate(`/playlist/${playlist._id}`)}>
                         <div className="playlist-text">
                             <div>{playlist.playlistName}</div>
                             <div>{playlist.videos.length}</div>

@@ -7,23 +7,41 @@ import { useAuth } from "../../context/AuthContext"
 import { usePlaylist } from "../../context/PlaylistContext"
 export const PlaylistVideo = () => {
 
-    const { playlist } = usePlaylist();
+    const { removeVideoPlaylist, getPlaylistVideos, playlist, getAllPlaylists } = usePlaylist();
     const { playlistId } = useParams();
+    const { token } = useAuth();
 
+    useEffect(() => {
+        getPlaylistVideos(token, playlistId);
+        getAllPlaylists(token);
+    }, [playlist])
 
-    return <div className="playlistVideo-container">
+    const handleClearAll = () => {
+        playlist.videos.forEach((vid) => {
+            removeVideoPlaylist(token, playlist._id, vid._id)
+        })
+    }
+    return <>
+        {
+            playlist && <div className="playlistVideo-container">
 
-        <Categories />
-        <div className="playlistVideo">
-            <h2>{playlist.playlistName && playlist.playlistName.toUpperCase()}</h2>
-            <div className="card-container">
-                {
-                    playlist.videos && playlist.videos.map((video) => {
-                        return <VideoCard el={video} key={video._id} playlistId={playlistId} />
-                    })
-                }
+                <Categories />
+                <div className="playlistVideo">
+                    <div className="likes-header">
+                        <h2>{playlist.playlistName && playlist.playlistName.toUpperCase()}</h2>
+                        <button onClick={handleClearAll}>Clear All</button>
+                    </div>
+
+                    <div className="card-container">
+                        {
+                            playlist.videos && playlist.videos.map((video) => {
+                                return <VideoCard el={video} key={video._id} playlistId={playlistId} />
+                            })
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        }
+    </>
 
 }

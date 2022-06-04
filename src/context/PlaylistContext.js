@@ -68,7 +68,6 @@ export const PlaylistProvider = ({ children }) => {
     const getPlaylistVideos = async (token, playlistId) => {
         try {
             const res = await GetPlaylistVideos(token, playlistId);
-            console.log(res);
             setPlaylist(res.data.playlist)
         }
         catch (error) {

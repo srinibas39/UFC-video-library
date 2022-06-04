@@ -15,7 +15,7 @@ export const VideoCard = ({ el, playlistId }) => {
     const { likes, removeLike } = useLike();
     const { history, removeHistory } = useHistory();
     const { watchlater, removeWatchlater } = useWatchlater();
-    const { removePlaylist } = usePlaylist();
+    const { removeVideoPlaylist } = usePlaylist();
     const { token } = useAuth();
     const location = useLocation();
     const [explore, setExplore] = useState(false);
@@ -70,7 +70,7 @@ export const VideoCard = ({ el, playlistId }) => {
 
             }
             {
-                playlistId && btnState.playlist ? <button className="btn-delete" onClick={() => removePlaylist(token, el._id)}><span className="material-icons-outlined">
+                playlistId && btnState.playlist ? <button className="btn-delete" onClick={() => removeVideoPlaylist(token, playlistId, el._id)}><span className="material-icons-outlined">
                     delete
                 </span></button> : ""
 
