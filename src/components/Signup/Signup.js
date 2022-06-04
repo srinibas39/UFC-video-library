@@ -7,9 +7,11 @@ export const Signup = () => {
     const navigate = useNavigate();
     const [form, setForm] = useState({ email: "", password: "", firstName: "", lastName: "" });
     const { signupHandler } = useAuth();
+    
 
     const handleSignup = () => {
-        signupHandler(form.email, form.password, form.firstName, form.lastName)
+        signupHandler(form.email, form.password, form.firstName, form.lastName);
+        navigate("/explore")
     }
 
     return <div className="signup-container">
