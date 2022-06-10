@@ -5,7 +5,7 @@ import { VideoCardContainer } from "../components/VideoCardContainer/VideoCardCo
 export const Explore = () => {
     return <>
         <NavBar />
-        <div class="main">
+        <div className="main">
             <Categories />
             <VideoCardContainer />
         </div>

@@ -1,16 +1,20 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import { PlaylistModal } from "../PlaylistModal/PlaylistModal";
 
 
-export const AddPlaylist = () => {
+export const AddPlaylist = ({ video }) => {
     const [openPlayListModal, setOpenPlaylistModal] = useState(false);
-   
+    const navigate = useNavigate();
+    const { token } = useAuth();
+
     return <>
         {
-            openPlayListModal && <PlaylistModal setOpenPlaylistModal={setOpenPlaylistModal} />
+            openPlayListModal && <PlaylistModal setOpenPlaylistModal={setOpenPlaylistModal} video={video} />
         }
-        <li onClick={() => setOpenPlaylistModal(!openPlayListModal)}><span className="material-icons-outlined">
+        <li onClick={() => token ? setOpenPlaylistModal(!openPlayListModal) : navigate("/login")}><span className="material-icons-outlined">
             topic
-        </span><div>Add Playlist</div></li>
+        </span></li>
     </>
 }

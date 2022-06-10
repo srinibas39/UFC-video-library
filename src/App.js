@@ -14,20 +14,23 @@ import { LikesPage } from "./pages/LikesPage";
 import { PlaylistVideoPage } from "./pages/PlaylistVideoPage";
 import { LoginPage } from "./pages/LoginPage";
 import { SignupPage } from "./pages/SignupPage";
+import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
+import { useAuth } from "./context/AuthContext";
 
 
 export const App = () => {
+  const { token } = useAuth()
   return <>
     <Routes>
       <Route path="*" element={<Error />} />
       <Route path="/" element={<Home />} />
       <Route path="/explore" element={<Explore />} />
-      <Route path="/watch/:videoId" element={<Watch />} />
-      <Route path="/playlist" element={<PlayListPage />} />
-      <Route path="/watchlater" element={<WatchLaterPage />} />
-      <Route path="/history" element={<HistoryPage />} />
-      <Route path="/likes" element={<LikesPage />} />
-      <Route path="/pvideo/:play" element={<PlaylistVideoPage />} />
+      <Route path="/watch/:videoId" element={<Watch/>} />
+      <Route path="/playlist" element={<PrivateRoute token={token}><PlayListPage /></PrivateRoute>} />
+      <Route path="/watchlater" element={<PrivateRoute token={token}><WatchLaterPage /></PrivateRoute>} />
+      <Route path="/history" element={<PrivateRoute token={token}><HistoryPage /></PrivateRoute>} />
+      <Route path="/likes" element={<PrivateRoute token={token}><LikesPage /></PrivateRoute>} />
+      <Route path="/playlist/:playlistId" element={<PrivateRoute token={token}><PlaylistVideoPage /></PrivateRoute>} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
     </Routes>

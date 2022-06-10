@@ -1,12 +1,8 @@
 .playlist-modal {
-    padding: 1rem;
-    position: absolute;
-    top: 53px;
-    left: 38px;
-    font-family: "DIN 2014", sans-serif;
-    list-style: none;
-    box-shadow: 0px 0px 10px 4px #aaa;
-    background-color: #fff;
+  padding: 1rem;
+  list-style: none;
+  box-shadow: 0px 0px 10px 4px #aaa;
+  background-color: #fff;
 }
 .playlist-modal li {
   display: flex;
@@ -45,4 +41,17 @@
 .playlist-header button {
   background: none;
   cursor: pointer;
+}
+
+.playlist-modal-container {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
 }

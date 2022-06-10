@@ -2,17 +2,17 @@
  * Videos Database can be added here.
  * You can add videos of your wish with different attributes
  * */
-import { v4 as uuid } from "uuid";
+
 export const videos = [
   {
     _id: "3d3ef9d4-6a56-4dae-a155-3b4a7554242c",
     title: "Conor McGregor vs Marcus Brimage",
     video: "https://www.youtube.com/embed/HelivOF6vI8",
     thumbnail: "https://i.ytimg.com/vi/HelivOF6vI8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmlnccdGcTIEPBCMQZ0h4Pimy-qQ",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Sentdex",
     playlist: [],
-
+    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    
   }, {
     _id: "4d3ef9d4-6a56-4dae-a155-3b4a7554242c",
     title: "Khabib Nurmagomedov vs Justin Gaethje",
@@ -20,7 +20,6 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/MQcXEWPesAw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjatUoW9YJ6DmVVeXVo_Zj2qJdtA",
     creator: "Sentdex",
     playlist: [],
-
     description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
   }, {
     _id: "5d3ef9d4-6a56-4dae-a155-3b4a7554242c",
