@@ -23,7 +23,7 @@ export const VideoProvider = ({ children }) => {
     })()
   }, [])
 
-  const getSingleVideo = async (videoId) => {
+  const getSingleVideo =  async(videoId) => {
     try {
       const res = await GetSingleVideo(videoId);
       return res.data.video;
@@ -33,7 +33,15 @@ export const VideoProvider = ({ children }) => {
     }
   }
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo }} >
+  const addComments = (comments, videoId) => {
+
+    const newAllVideos = allVideos.reduce((a, c) => c._id === videoId ? [...a, { ...c, comments: [...comments] }] : [...a, c], [])
+    setAllVideos(newAllVideos);
+
+
+  }
+
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments }} >
     {children}
   </VideoContext.Provider>
 }
