@@ -1,12 +1,13 @@
 
-
-.likes {
-  width: 89vw;
-}
-
-.likes h2 {
+.likes-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--primary-color);
   margin: 2rem;
 }
+
 
 .card-container {
   display: flex;

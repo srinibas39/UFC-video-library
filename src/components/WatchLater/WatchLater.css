@@ -1,11 +1,4 @@
 
-.watchlater {
-  width: 89vw;
-}
-
-.watchlater h2 {
-  margin: 2rem;
-}
 
 .card-container {
   display: flex;
@@ -17,6 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  color: var(--primary-color);
+  margin: 2rem;
 }
 
 .watchlater-header button {
