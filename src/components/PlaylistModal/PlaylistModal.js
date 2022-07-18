@@ -9,15 +9,9 @@ import { useAuth } from "../../context/AuthContext";
 export const PlaylistModal = ({ setOpenPlaylistModal, video }) => {
 
 
-    const { playlists, addPlaylist, addVideoPlaylist, removeVideoPlaylist, getAllPlaylists, playlist } = usePlaylist();
+    const { playlists, addPlaylist, addVideoPlaylist, removeVideoPlaylist, getAllPlaylists } = usePlaylist();
     const { token } = useAuth();
     const [playlistName, setPlaylistName] = useState("");
-
-
-
-
-
-
 
     const handlePlaylists = (e, playlistId) => {
         if (e.target.checked) {

@@ -26,5 +26,5 @@ export const VideoComponent = ({ video }) => {
 
 
     </>
-
+1
 }
