@@ -36,7 +36,7 @@ export const NavBar = () => {
         <ul>
 
             <NavLink to="/explore" className={({ isActive }) => isActive ? "link-active" : "link-not-active"} ><li>EXPLORE</li></NavLink>
-            <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>ALL PLAYLIST</li></NavLink>
+            <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>PLAYLISTS</li></NavLink>
             {
                 logged ? <li><button className="btn-signup" onClick={() => (logoutHandler(), setLogged(false))}>LOGOUT</button></li> :
                     <><li><button className="btn-login" onClick={() => (navigate("/login"))}>LOG IN</button></li>
