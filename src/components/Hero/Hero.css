@@ -1,34 +1,60 @@
-.hero{
-    background-image: url("https://assets-global.website-files.com/5cf5a026c1709374131c1228/5d112eba975a6d64c7a47ff6_5d00170711b2db4a660014fb_hero1edit.jpeg");
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    font-family: 'DIN 2014', sans-serif;
+.hero {
+  background-image: url("https://assets-global.website-files.com/5cf5a026c1709374131c1228/5d112eba975a6d64c7a47ff6_5d00170711b2db4a660014fb_hero1edit.jpeg");
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: "DIN 2014", sans-serif;
 }
-.hero div{
-    color: white;
-    text-align: center;
-    width: 40rem;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.hero div {
+  color: white;
+  text-align: center;
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.hero button{
-    padding: 0.5rem;
-    width: 10rem;
-    height: 3rem;
-    background-color: #d20a0a;
-    border: 2px solid #d20a0a ;
-    color: white;
-    font-family: 'DIN 2014', sans-serif;
-    cursor: pointer;
+.hero button {
+  padding: 0.5rem;
+  width: 5rem;
+  height: 3rem;
+  background-color: #d20a0a;
+  border: 2px solid #d20a0a;
+  color: white;
+  font-family: "DIN 2014", sans-serif;
+  cursor: pointer;
 }
 
-.hero button:hover{
-    color:#d20a0a;
-    background-color:#fff;
+.hero button:hover {
+  color: #d20a0a;
+  background-color: #fff;
+}
+
+.hero img {
+  width: 18rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.hero h3 {
+  margin: 1rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 30rem) {
+  .hero-button {
+    width: 10rem;
+  }
+  .hero img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .hero h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
 }
