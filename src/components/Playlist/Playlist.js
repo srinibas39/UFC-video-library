@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { usePlaylist } from "../../context/PlaylistContext";
 import "./Playlist.css";
+import { ReactComponent as PlaylistSvg } from "../../images/playlist.svg"
 
 export const Playlist = () => {
 
@@ -10,8 +11,8 @@ export const Playlist = () => {
     const navigate = useNavigate();
 
     const handleClearAll = () => {
-        playlists.forEach((play)=>{
-            removePlaylist(token,play._id)
+        playlists.forEach((play) => {
+            removePlaylist(token, play._id)
         })
     }
 
@@ -22,7 +23,7 @@ export const Playlist = () => {
         </div>
         <div className="playlists">
             {
-                playlists && playlists.map((playlist) => {
+                playlists.length ? playlists.map((playlist) => {
 
                     return <div key={playlist._id} className="playlist" onClick={() => playlist.videos.length && navigate(`/playlist/${playlist._id}`)}>
                         <div className="playlist-text">
@@ -33,7 +34,7 @@ export const Playlist = () => {
                             delete
                         </span></button>
                     </div>
-                })
+                }) : <PlaylistSvg style={{ margin: "1rem" }} />
             }
 
         </div>

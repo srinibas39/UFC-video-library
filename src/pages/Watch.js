@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Footer } from "../components/Footer/Footer";
 import { NavBar } from "../components/Navbar/Navbar"
 import { VideoComponent } from "../components/VideoComponent/VideoComponent"
 import { VideoOption } from "../components/VideoOptions/VideoOption"
@@ -24,5 +25,6 @@ export const Watch = () => {
         <NavBar />
         <VideoComponent video={videoItem} />
         <VideoOption videoItem={videoItem} />
+        <Footer/>
     </>
 }

@@ -4,6 +4,7 @@ import { useWatchlater } from "../../context/WatchlaterContext"
 import { Categories } from "../Categories/Categories"
 import { VideoCard } from "../VideoCard/VideoCard"
 import "./WatchLater.css"
+import {ReactComponent as WatchlaterSvg} from "../../images/watchlater.svg"
 
 export const WatchLater = () => {
     const { watchlater, removeWatchlater } = useWatchlater();
@@ -24,9 +25,9 @@ export const WatchLater = () => {
 
             <div className="card-container">
                 {
-                    watchlater && watchlater.map((el) => {
+                    watchlater.length ? watchlater.map((el) => {
                         return <VideoCard key={el._id} el={el} />
-                    })
+                    }):<WatchlaterSvg style={{margin:"1rem"}}/>
                 }
             </div>
         </div>

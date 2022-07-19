@@ -1,10 +1,12 @@
 
-import { useEffect } from "react";
+
 import { useAuth } from "../../context/AuthContext";
 import { useLike } from "../../context/LikeContext";
 import { Categories } from "../Categories/Categories"
 import { VideoCard } from "../VideoCard/VideoCard"
 import "./Like.css"
+import {ReactComponent as Likesvg} from "../../images/likes.svg"
+
 
 export const Like = () => {
 
@@ -26,9 +28,11 @@ export const Like = () => {
             </div>
             <div className="card-container">
                 {
-                    likes && likes.map((el) => {
+                    likes.length ? likes.map((el) => {
                         return <VideoCard el={el} key={el._id} />
-                    })
+                    }):<Likesvg style={{margin:"1rem"}}/>
+                    
+                    
                 }
             </div>
         </div>

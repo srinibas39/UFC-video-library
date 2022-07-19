@@ -2,7 +2,8 @@ import { useAuth } from "../../context/AuthContext"
 import { useHistory } from "../../context/HistoryContext"
 import { Categories } from "../Categories/Categories"
 import { VideoCard } from "../VideoCard/VideoCard"
-import "./History.css"
+import "./History.css";
+import {ReactComponent as Historysvg} from "../../images/history.svg"
 
 export const History = () => {
     const { history, removeAllHistory } = useHistory();
@@ -18,9 +19,9 @@ export const History = () => {
             </div>
             <div className="card-container">
                 {
-                    history && history.map((el, idx) => {
+                    history.length ? history.map((el, idx) => {
                         return <VideoCard key={idx} el={el} />
-                    })
+                    }):<Historysvg style={{margin:"1rem"}}/>
                 }
             </div>
         </div>
