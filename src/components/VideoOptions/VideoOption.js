@@ -9,7 +9,15 @@ export const VideoOption = ({ videoItem }) => {
 
     return <div className="video-option-container">
         <div className="video-option">
-            <div className="video-option-header">{videoItem.title}</div>
+            <div className="video-option-description">
+                <div className="video-option-img">
+                    <img src={require("../../images/ufc.jpg")} />
+                </div>
+                <div className="video-option-text">
+                    <div className="video-option-header">{videoItem.title}</div>
+                    <p>{videoItem.description}</p>
+                </div>
+            </div>
             <ul className="video-option-categories">
 
                 <AddPlaylist video={videoItem} />

@@ -11,7 +11,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/HelivOF6vI8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmlnccdGcTIEPBCMQZ0h4Pimy-qQ",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
 
@@ -23,7 +23,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/MQcXEWPesAw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjatUoW9YJ6DmVVeXVo_Zj2qJdtA",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -33,7 +33,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/9V03KpJBEaw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJXwtLRNkypqk1KpnN5nSSYMMMIw",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -43,7 +43,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/DyvjV3Lt8Pw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYL1CtslYP3CgpgkpNOZtYaNELWw",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -53,7 +53,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/vio-IeNBCvk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZtF1lASi64A6VloNOF7MrIjvb8w",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -63,7 +63,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/NR3SEWZ481E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUnM7BZsfZVF24HIsO9rqptvD2zA",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -73,7 +73,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/DpLaqnwFQEY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVwDl2LvRmVq2Jj6NJ1ZaqssDc8w",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -83,7 +83,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/Gc5eZhgEb1c/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBskgEB29hPQQzvgYqPcLwg9nxKHg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -93,7 +93,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/zea_QpSpfGs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdFxJl9PXbrkuVN7I19BdWMNkyqg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Matches"
   }, {
@@ -103,7 +103,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/oCEYKYWsQEg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEh-n0y2mhyn1n6rZtOGX7Gh-HKw",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -113,7 +113,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/EGi-rB1jCCY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQgm3N8P_3739QCTqbaaRC3SY4Jw",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -123,7 +123,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/2N_7pgW0vE4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCxbTCOhJYlFyApI50hsDxRe11uNg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -133,7 +133,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/Ky2srpDCwk8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVajvC5P1uZUZqFYIMMtFxGlNIeg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -143,7 +143,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/H0lwHFgYHXk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHbQPdlTONU4jmTEtFNLsvvUQgtg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -153,7 +153,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/scB4HhWe3_o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAd6pwyGy6OvzlLfLWRa28IvQssrA",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -163,7 +163,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/jDRSkTn4OZE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLoy0HvHK0H56ifL1qivG2mmvB8g",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -173,7 +173,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/DH6mHW8_sYk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCce2gDkxeInhAsjZ2nEF33nl-l5A",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -183,7 +183,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/lIwjvbj2Wcc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmOsccLd2T2QOBlq6JaASZ1u_xmg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -193,7 +193,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/8_pMTmjDbnY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbnWQ24kL9aJdoPnQ9yx5wMZTmAA",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -203,7 +203,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/8_pMTmjDbnY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbnWQ24kL9aJdoPnQ9yx5wMZTmAA",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Facts"
   }, {
@@ -213,7 +213,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/rAnLPKGbytU/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB66kko1fxhjRhD_3tGQMzoLEfvzg",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Podcasts"
 
@@ -224,7 +224,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/Hk3X_QNWSd8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAT8ccag8nLBLirPyVx_VKaIx5xkQ",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Podcasts"
   }, {
@@ -234,7 +234,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/8TpUS1IKwvE/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBtKlqCtzTGTE_Xv-st5kla3Hjh_A",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Podcasts"
   }, {
@@ -244,7 +244,7 @@ export const videos = [
     thumbnail: "https://i.ytimg.com/vi/yZKhfZ25L4o/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALYGYscLma_lz33X-b-mKYFR2FVA",
     creator: "UFC",
     playlist: [],
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    description: `Ultimate Fighting Championship® is the world's leading mixed martial arts organization. Over the past decade, with the help of state athletic commissions throughout the United States, UFC® has morphed itself from a spectacle into a highly respected sports organization. Major fights between world-renowned mixed martial arts superstars have become some of the most popular sporting events of the year, surpassing pay-per-view records previously held by boxing and professional wrestling. Sports fans have made their voices heard - they want reality when they watch sports, and UFC is clearly "AS REAL AS IT GETS!"`,
     comments: [],
     category: "MMA Podcasts"
   },
