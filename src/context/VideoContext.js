@@ -14,13 +14,18 @@ export const VideoProvider = ({ children }) => {
     (async () => {
       try {
         const res = await GetAllVideos();
-        setAllVideos(res.data.videos);
+        if (res.status === 200 || res.status === 201) {
+
+          setAllVideos(res.data.videos);
+        }
       }
       catch (err) {
         console.log(err);
       }
     })()
   }, [])
+
+
 
 
 

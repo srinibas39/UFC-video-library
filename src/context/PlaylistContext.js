@@ -74,6 +74,7 @@ export const PlaylistProvider = ({ children }) => {
             console.log(error);
         }
     }
+    
 
     return <PlaylistContext.Provider value={{ addPlaylist, removePlaylist, addVideoPlaylist, removeVideoPlaylist, playlists, getAllPlaylists, getPlaylistVideos, playlist, setPlaylists,setPlaylist }}>
         {children}

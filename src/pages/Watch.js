@@ -9,7 +9,7 @@ import { useVideo } from "../context/VideoContext";
 export const Watch = () => {
 
     const { videoId } = useParams();
-    const { getSingleVideo, video } = useVideo();
+    const { getSingleVideo} = useVideo();
     const [videoItem, setVideoItem] = useState({});
 
 
@@ -20,11 +20,12 @@ export const Watch = () => {
         })()
 
     }, []);
-    
+
     return <>
+
         <NavBar />
         <VideoComponent video={videoItem} />
         <VideoOption videoItem={videoItem} />
-        <Footer/>
+        <Footer />
     </>
 }

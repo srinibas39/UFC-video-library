@@ -3,7 +3,7 @@ import { Comment } from "../Comment/Comment";
 import "./VideoComponent.css";
 import { useHistory } from "../../context/HistoryContext";
 import { useAuth } from "../../context/AuthContext";
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactPlayer from 'react-player'
 
 
@@ -12,6 +12,9 @@ export const VideoComponent = ({ video }) => {
 
     const { addHistory } = useHistory();
     const { token } = useAuth();
+   
+    
+
 
     return <>
 
@@ -26,5 +29,5 @@ export const VideoComponent = ({ video }) => {
 
 
     </>
-1
+    1
 }

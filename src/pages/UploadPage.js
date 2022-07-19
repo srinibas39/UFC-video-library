@@ -1,19 +1,13 @@
-
-import { AutoComplete } from "../components/AutoComplete/AutoComplete"
 import { Categories } from "../components/Categories/Categories"
 import { Footer } from "../components/Footer/Footer"
 import { NavBar } from "../components/Navbar/Navbar"
-import { VideoCardContainer } from "../components/VideoCardContainer/VideoCardContainer"
+import { Upload } from "../components/Upload/Upload"
 
-
-export const Explore = () => {
-  
+export const UploadPage = () => {
     return <>
         <NavBar />
         <Categories />
-        <AutoComplete />
-        <VideoCardContainer />
+        <Upload />
         <Footer />
-
     </>
 }

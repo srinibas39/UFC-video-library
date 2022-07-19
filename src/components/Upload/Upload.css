@@ -1,0 +1,49 @@
+
+.upload-container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.upload{
+    height: 20rem;
+    width: 22rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow1);
+    padding: 1rem;
+}
+
+.upload form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.upload form input{
+    width: 20rem;
+    height: 1.5rem;
+}
+
+.upload-container button{
+    position: absolute;
+    bottom: 0;
+    width: 5rem;
+    height: 3rem;
+    background-color: #d20a0a;
+    border: 2px solid #d20a0a;
+    color: white;
+    font-family: "DIN 2014", sans-serif;
+    cursor: pointer;
+    margin: 1rem;
+    
+}
+
+.upload-container button:hover{
+    color: #d20a0a;
+    background-color: #fff;
+}
