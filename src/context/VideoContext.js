@@ -43,20 +43,22 @@ export const VideoProvider = ({ children }) => {
     }
   }
 
-  const addComments = (comments, videoId) => {
-
+  const addComments = (comment, videoId) => {
+    
     const newAllVideos = allVideos.reduce((a, c) => c._id === videoId ?
-      [...a, { ...c, comments: comments }] : [...a, { ...c }], [])
+      [...a, { ...c, comments: [...c.comments,comment] }] : [...a,c], [])
+
+      console.log(newAllVideos);
 
     setAllVideos([...newAllVideos]);
-
+   
   }
 
 
 
 
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, commentedVideos }} >
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments }} >
     {children}
   </VideoContext.Provider>
 }

@@ -4,8 +4,8 @@ import { useVideo } from "../../context/VideoContext";
 import "./Comment.css"
 export const Comment = () => {
     const [comment, setComment] = useState("");
-    const [comments, setComments] = useState([]);
-    const { addComments, allVideos,commentedVideos } = useVideo();
+ 
+    const { addComments, allVideos} = useVideo();
     const { videoId } = useParams();
     const [video, setVideo] = useState(null);
 
@@ -14,16 +14,17 @@ export const Comment = () => {
     useEffect(() => {
         const video = allVideos.find((vid) => vid._id === videoId)
         setVideo(video)
-    }, [comments])
+    }, [allVideos])
 
     
 
     const handleComments = () => {
+        
         if (comment) {
-            setComments([...comments, comment])
-            addComments(comments, videoId)
+            addComments(comment, videoId)
             setComment("");
         }
+        
     }
 
     return <div className="comment">
