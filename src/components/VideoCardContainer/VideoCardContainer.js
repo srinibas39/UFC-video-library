@@ -7,10 +7,10 @@ import "./VideoCardContainer.css"
 
 export const VideoCardContainer = () => {
 
-    const { allVideos, setAllVideos } = useVideo();
+    const { allVideos } = useVideo();
 
     const [filteredData, setFilteredData] = useState([]);
-    
+
 
     const handleFilteredData = (category) => {
         if (!filteredData.includes(category)) {
@@ -48,9 +48,9 @@ export const VideoCardContainer = () => {
     return <>
 
         <div className="video-filters">
-            <button id={filteredData.includes("MMA Matches") ? `primary`:"" } onClick={(e) => handleFilteredData(e.target.innerText)}>MMA Matches</button>
-            <button id={filteredData.includes("MMA Podcasts") ? `primary`:"" } onClick={(e) => handleFilteredData(e.target.innerText)}>MMA Podcasts</button>
-            <button id={filteredData.includes("MMA Facts") ? `primary`:"" } onClick={(e) => handleFilteredData(e.target.innerText)}>MMA Facts </button>
+            <button id={filteredData.includes("MMA Matches") ? `primary` : ""} onClick={(e) => handleFilteredData(e.target.innerText)}>MMA Matches</button>
+            <button id={filteredData.includes("MMA Podcasts") ? `primary` : ""} onClick={(e) => handleFilteredData(e.target.innerText)}>MMA Podcasts</button>
+            <button id={filteredData.includes("MMA Facts") ? `primary` : ""} onClick={(e) => handleFilteredData(e.target.innerText)}>MMA Facts </button>
 
         </div>
         <div className="videocard-container">

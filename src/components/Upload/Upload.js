@@ -3,8 +3,10 @@ import { useState } from "react"
 import "./Upload.css"
 import { v4 as uuid } from "uuid";
 import { useVideo } from "../../context/VideoContext";
+import { useAuth } from "../../context/AuthContext";
 export const Upload = () => {
-    const { allVideos, setAllVideos } = useVideo();
+    const { allVideos, setAllVideos, addVideo } = useVideo();
+    const { token } = useAuth();
     const [form, setForm] = useState({
         title: "",
         video: "",
@@ -13,7 +15,8 @@ export const Upload = () => {
         category: "",
     })
     const handleUpload = () => {
-        setAllVideos([...allVideos, { ...form, _id: uuid() }])
+        // setAllVideos([...allVideos, { ...form, _id: uuid() }])
+        addVideo(token, { ...form, _id: uuid() })
     }
     return <>
         <div className="upload-container">

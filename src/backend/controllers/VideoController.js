@@ -1,4 +1,5 @@
 import { Response } from "miragejs";
+import { requiresAuth } from "../utils/authUtils";
 
 /**
  * All the routes related to Videos are present here.
@@ -51,3 +52,4 @@ export const getVideoHandler = function (schema, request) {
     );
   }
 };
+

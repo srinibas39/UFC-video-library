@@ -9,19 +9,27 @@ import { useVideo } from "../context/VideoContext";
 export const Watch = () => {
 
     const { videoId } = useParams();
-    const { getSingleVideo} = useVideo();
+    const { getSingleVideo, allVideos } = useVideo();
     const [videoItem, setVideoItem] = useState({});
 
 
+
+
     useEffect(() => {
-        (async () => {
-            const videoItem = await getSingleVideo(videoId);
-            setVideoItem(videoItem)
-        })()
+        // (async () => {
+        //     const videoItem = await getSingleVideo(videoId);
+        //     setVideoItem(videoItem)
+        // })()
 
-    }, []);
+        const video = allVideos.find((vid) => vid._id === videoId);
+        setVideoItem(video)
 
-    return <>
+
+    });
+
+
+
+    return videoItem && <>
 
         <NavBar />
         <VideoComponent video={videoItem} />

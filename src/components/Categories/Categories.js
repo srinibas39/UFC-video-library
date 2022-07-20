@@ -32,7 +32,7 @@ export const Categories = () => {
             <li><span className="material-symbols-outlined">
                 dark_mode
             </span><div>Dark</div></li></Link>
-        <Link to="#" style={{ textDecoration: "none" }}>
+        <Link to="/upload" style={{ textDecoration: "none" }}>
             <li><span className="material-symbols-outlined">
                 file_upload
             </span><div>Upload</div></li></Link>

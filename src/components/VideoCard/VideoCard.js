@@ -1,4 +1,4 @@
-import { Link, useLocation, useParams } from "react-router-dom"
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useHistory } from "../../context/HistoryContext";
@@ -25,6 +25,7 @@ export const VideoCard = ({ el, playlistId }) => {
         watchlater: false,
         playlist: false
     })
+    const navigate = useNavigate();
 
 
 
@@ -78,6 +79,8 @@ export const VideoCard = ({ el, playlistId }) => {
 
         </div>
 
-        <button className="btn-watchnow"><Link to={`/watch/${el._id}`} className="link">Watch Now</Link></button>
+        <button className="btn-watchnow" onClick={()=>navigate(`/watch/${el._id}`)}>
+            Watch Now
+        </button>
     </div>
 }
