@@ -6,6 +6,6 @@ export const LoginPage = () => {
     return <>
         <NavBar />
         <Login />
-        <Footer/>
+        <Footer />
     </>
 }

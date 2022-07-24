@@ -6,6 +6,6 @@ export const PlaylistVideoPage = () => {
     return <>
         <NavBar />
         <PlaylistVideo />
-        <Footer/>
+        <Footer />
     </>
 }

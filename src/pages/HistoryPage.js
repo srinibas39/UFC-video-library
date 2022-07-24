@@ -4,7 +4,7 @@ import { NavBar } from "../components/Navbar/Navbar"
 
 export const HistoryPage = () => {
     return <>
-        <NavBar />
+        <NavBar />      
         <History/>
         <Footer/>
     </>
