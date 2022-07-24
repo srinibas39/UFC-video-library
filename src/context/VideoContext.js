@@ -9,6 +9,7 @@ export const VideoContext = createContext();
 export const VideoProvider = ({ children }) => {
 
   const [allVideos, setAllVideos] = useState([]);
+  const [videoFilters, setVideoFilters] = useState(["MMA Matches", "MMA Podcasts", "MMA Facts"])
 
   useEffect(() => {
 
@@ -42,25 +43,30 @@ export const VideoProvider = ({ children }) => {
   }
 
   const addComments = (comment, videoId) => {
-    
-    const newAllVideos = allVideos.reduce((a, c) => c._id === videoId ?
-      [...a, { ...c, comments: [...c.comments,comment] }] : [...a,c], [])
 
-      console.log(newAllVideos);
+    const newAllVideos = allVideos.reduce((a, c) => c._id === videoId ?
+      [...a, { ...c, comments: [...c.comments, comment] }] : [...a, c], [])
+
+    console.log(newAllVideos);
 
     setAllVideos([...newAllVideos]);
-   
+
   }
 
-  const addVideo=(video)=>{
-    setAllVideos([...allVideos,video])
+  const addVideo = (video) => {
+    setAllVideos([...allVideos, video])
+    if(!videoFilters.includes(video.category))
+    setVideoFilters([...videoFilters, video.category])
+    
   }
 
 
 
 
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments,addVideo }} >
+
+
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters }} >
     {children}
   </VideoContext.Provider>
 }
