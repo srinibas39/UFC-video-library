@@ -19,8 +19,6 @@ export const VideoProvider = ({ children }) => {
         if (res.status === 200 || res.status === 201) {
 
           setAllVideos([...res.data.videos]);
-          console.log("a");
-
         }
       }
       catch (err) {
@@ -54,11 +52,15 @@ export const VideoProvider = ({ children }) => {
    
   }
 
+  const addVideo=(video)=>{
+    setAllVideos([...allVideos,video])
+  }
 
 
 
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments }} >
+
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments,addVideo }} >
     {children}
   </VideoContext.Provider>
 }

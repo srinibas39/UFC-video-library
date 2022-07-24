@@ -16,16 +16,12 @@ export const Watch = () => {
 
 
     useEffect(() => {
-        // (async () => {
-        //     const videoItem = await getSingleVideo(videoId);
-        //     setVideoItem(videoItem)
-        // })()
-
+      
         const video = allVideos.find((vid) => vid._id === videoId);
         setVideoItem(video)
 
 
-    });
+    },[]);
 
 
 

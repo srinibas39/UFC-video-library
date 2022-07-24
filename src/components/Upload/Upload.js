@@ -5,18 +5,29 @@ import { v4 as uuid } from "uuid";
 import { useVideo } from "../../context/VideoContext";
 import { useAuth } from "../../context/AuthContext";
 export const Upload = () => {
-    const { allVideos, setAllVideos, addVideo } = useVideo();
-    const { token } = useAuth();
+    const { addVideo } = useVideo();
     const [form, setForm] = useState({
         title: "",
         video: "",
         thumbnail: "",
         description: "",
         category: "",
+        comments: []
     })
     const handleUpload = () => {
-        // setAllVideos([...allVideos, { ...form, _id: uuid() }])
-        addVideo(token, { ...form, _id: uuid() })
+        if(form.title && form.video && form.thumbnail && form.description && form.category){
+
+            addVideo({ ...form, _id: uuid() })
+            setForm({
+                ...form,
+                title: "",
+                video: "",
+                thumbnail: "",
+                description: "",
+                category: "",
+                comments: []
+            })
+        }
     }
     return <>
         <div className="upload-container">
