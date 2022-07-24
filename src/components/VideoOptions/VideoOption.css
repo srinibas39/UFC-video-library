@@ -19,12 +19,14 @@
   font-size: 2rem;
   font-weight: 700;
   font-family: "DIN 2014", sans-serif;
+  text-align: center;
 }
 
 .video-option-categories {
   list-style: none;
   display: flex;
   position: relative;
+  justify-content: center;
 }
 .video-option-categories li {
   margin: 0 1rem;
@@ -86,10 +88,14 @@
     font-size: 1.5rem;
     font-weight: 700;
     font-family: "DIN 2014", sans-serif;
+    text-align: left;
   }
   .video-option-text p {
     margin: 1rem;
     font-size: 1rem;
+  }
+  .video-option-categories{
+    justify-content: left;
   }
 
 

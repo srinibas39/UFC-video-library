@@ -11,6 +11,7 @@ export const VideoProvider = ({ children }) => {
   const [allVideos, setAllVideos] = useState([]);
   const [videoFilters, setVideoFilters] = useState(["MMA Matches", "MMA Podcasts", "MMA Facts"])
 
+
   useEffect(() => {
 
 
@@ -55,16 +56,10 @@ export const VideoProvider = ({ children }) => {
 
   const addVideo = (video) => {
     setAllVideos([...allVideos, video])
-    if(!videoFilters.includes(video.category))
-    setVideoFilters([...videoFilters, video.category])
-    
+    if (!videoFilters.includes(video.category))
+      setVideoFilters([...videoFilters, video.category])
+
   }
-
-
-
-
-
-
 
   return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters }} >
     {children}

@@ -3,8 +3,9 @@ import { useState } from "react"
 import "./Upload.css"
 import { v4 as uuid } from "uuid";
 import { useVideo } from "../../context/VideoContext";
-import { useAuth } from "../../context/AuthContext";
+
 export const Upload = () => {
+
     const { addVideo } = useVideo();
     const [form, setForm] = useState({
         title: "",
@@ -15,8 +16,7 @@ export const Upload = () => {
         comments: []
     })
     const handleUpload = () => {
-        if(form.title && form.video && form.thumbnail && form.description && form.category){
-
+        if (form.title && form.video && form.thumbnail && form.description && form.category) {
             addVideo({ ...form, _id: uuid() })
             setForm({
                 ...form,
