@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useWatchlater } from "../../context/WatchlaterContext";
+import { handleToast } from "../../utils/toastUtils";
 import "../WatchLater/WatchLater.css"
 
 
 export const AddWatchLater = ({ video }) => {
-
 
     // new implementation
     const { token } = useAuth();
@@ -20,13 +20,34 @@ export const AddWatchLater = ({ video }) => {
         setVideoItem(videoItem)
     })
 
+    const addingWatchlater = () => {
+        if (token) {
+            handleToast("Adding video to watch later")
+            setTimeout(() => addWatchlater(token, video), 1500)
+
+        }
+        else {
+            navigate("/login")
+        }
+    }
+    const removingWatchlater = () => {
+        if (token) {
+            handleToast("Removing video from watchlater")
+            setTimeout(() => removeWatchlater(token, video._id), 1500)
+
+        }
+        else {
+            navigate("/login")
+        }
+    }
+
     return <>
         {
             videoItem ?
-                <li className="watch" onClick={() => token ? removeWatchlater(token, video._id) : navigate("/login")}><span className="material-icons-outlined">
+                <li className="watch" onClick={removingWatchlater}><span className="material-icons-outlined">
                     watch_later
                 </span></li> :
-                <li onClick={() => token ? addWatchlater(token, video) : navigate("/login")}><span className="material-icons-outlined">
+                <li onClick={addingWatchlater}><span className="material-icons-outlined">
                     watch_later
                 </span></li>
 

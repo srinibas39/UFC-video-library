@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useVideo } from "../../context/VideoContext";
+import { handleToast, handleToastWarning } from "../../utils/toastUtils";
 import "./Comment.css"
 export const Comment = () => {
     const [comment, setComment] = useState("");
- 
-    const { addComments, allVideos} = useVideo();
+    const { addComments, allVideos } = useVideo();
     const { videoId } = useParams();
     const [video, setVideo] = useState(null);
 
@@ -16,15 +16,22 @@ export const Comment = () => {
         setVideo(video)
     }, [allVideos])
 
-    
+
 
     const handleComments = () => {
-        
+
         if (comment) {
-            addComments(comment, videoId)
-            setComment("");
+            handleToast("Comment added successfully")
+            setTimeout(() => {
+                addComments(comment, videoId)
+                setComment("");
+            },1500)
+
         }
-        
+        else {
+            handleToastWarning("Please fill the comment box")
+        }
+
     }
 
     return <div className="comment">

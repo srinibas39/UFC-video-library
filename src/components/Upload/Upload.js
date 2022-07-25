@@ -3,6 +3,7 @@ import { useState } from "react"
 import "./Upload.css"
 import { v4 as uuid } from "uuid";
 import { useVideo } from "../../context/VideoContext";
+import { handleToast, handleToastWarning } from "../../utils/toastUtils";
 
 export const Upload = () => {
 
@@ -17,16 +18,23 @@ export const Upload = () => {
     })
     const handleUpload = () => {
         if (form.title && form.video && form.thumbnail && form.description && form.category) {
-            addVideo({ ...form, _id: uuid() })
-            setForm({
-                ...form,
-                title: "",
-                video: "",
-                thumbnail: "",
-                description: "",
-                category: "",
-                comments: []
-            })
+            handleToast("Upload Successful")
+            setTimeout(() => {
+                addVideo({ ...form, _id: uuid() })
+                setForm({
+                    ...form,
+                    title: "",
+                    video: "",
+                    thumbnail: "",
+                    description: "",
+                    category: "",
+                    comments: []
+                })
+            }, 1500)
+
+        }
+        else {
+            handleToastWarning("Please fill up the upload form.")
         }
     }
     return <>

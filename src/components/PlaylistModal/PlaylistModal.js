@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import "./PlaylistModal.css"
 import { usePlaylist } from "../../context/PlaylistContext";
 import { useAuth } from "../../context/AuthContext";
+import { handleToast, handleToastWarning } from "../../utils/toastUtils";
 
 
 
@@ -15,16 +16,46 @@ export const PlaylistModal = ({ setOpenPlaylistModal, video }) => {
 
     const handlePlaylists = (e, playlistId) => {
         if (e.target.checked) {
-            addVideoPlaylist(token, playlistId, video);
-            getAllPlaylists(token);
+            handleToast("Adding your video in the playlist");
+            setTimeout(() => {
+                addVideoPlaylist(token, playlistId, video);
+                getAllPlaylists(token);
+            }, 1500)
+
 
         }
         else {
-            removeVideoPlaylist(token, playlistId, video._id);
-            getAllPlaylists(token)
+            handleToast("Removing your video from the playlist");
+            setTimeout(() => {
+                removeVideoPlaylist(token, playlistId, video._id);
+                getAllPlaylists(token)
+            }, 1500)
+
         }
 
     }
+
+    const addPlaylistName = () => {
+        if (playlistName.trim().length) {
+            handleToast("Adding Playlist");
+            setTimeout(() => {
+                addPlaylist(token, { playlistName })
+                setPlaylistName("")
+            }, 1500)
+        }
+        else {
+            handleToastWarning("Playlist field cannot be empty");
+        }
+    }
+
+    const playlistModalClose = () => {
+        handleToast("Closing the playlist model");
+        setTimeout(() => {
+            setOpenPlaylistModal(false)
+        }, 1500)
+
+    }
+
 
 
 
@@ -32,7 +63,7 @@ export const PlaylistModal = ({ setOpenPlaylistModal, video }) => {
         <ul className="playlist-modal" >
             <div className="playlist-header">
                 <p>Add To Playlist</p>
-                <button onClick={() => setOpenPlaylistModal(false)}><span className="material-icons-outlined">
+                <button onClick={playlistModalClose}><span className="material-icons-outlined">
                     close
                 </span></button>
             </div>
@@ -44,7 +75,7 @@ export const PlaylistModal = ({ setOpenPlaylistModal, video }) => {
 
             <div className="playlist-input">
                 <input value={playlistName} onChange={(e) => setPlaylistName(e.target.value)} placeholder="Type your playlist"></input>
-                <button onClick={() =>(playlistName.trim().length && addPlaylist(token, { playlistName }), setPlaylistName(""))}>Add</button>
+                <button onClick={addPlaylistName}>Add</button>
             </div>
         </ul>
     </div>
