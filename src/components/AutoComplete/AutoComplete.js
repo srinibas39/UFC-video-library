@@ -1,12 +1,15 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { useVideo } from "../../context/VideoContext";
 import "./AutoComplete.css"
 
-export const AutoComplete = ({suggestions}) => {
+export const AutoComplete = ({ suggestions }) => {
 
- 
 
-   
+    const { getSearchedVideo } = useVideo();
+    const navigate = useNavigate();
+
+
     const [filteredSuggestion, setFiltereSuggestion] = useState([]);
     const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
     const [showSuggestion, setShowSuggestion] = useState(false);
@@ -19,6 +22,8 @@ export const AutoComplete = ({suggestions}) => {
     }
     const handleSearchText = (e) => {
         setSearchText(e.target.innerText);
+        getSearchedVideo(e.target.innerText)
+        navigate("/search")
         setFiltereSuggestion([])
         setShowSuggestion(false);
     }

@@ -17,6 +17,7 @@ import { SignupPage } from "./pages/SignupPage";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 import { useAuth } from "./context/AuthContext";
 import { UploadPage } from "./pages/UploadPage";
+import { SearchedVideo } from "./components/SearchedVideo/SearchedVideo";
 
 
 
@@ -36,8 +37,9 @@ export const App = () => {
       <Route path="/playlist/:playlistId" element={<PrivateRoute token={token}><PlaylistVideoPage /></PrivateRoute>} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
-      <Route path="/upload" element={ <UploadPage/>}/>
-     
+      <Route path="/upload" element={<UploadPage />} />
+      <Route path="/search" element={<SearchedVideo />} />
+
     </Routes>
   </>
 }

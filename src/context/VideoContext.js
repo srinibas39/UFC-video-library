@@ -9,12 +9,12 @@ export const VideoContext = createContext();
 export const VideoProvider = ({ children }) => {
 
   const [allVideos, setAllVideos] = useState([]);
-  const [videoFilters, setVideoFilters] = useState(["MMA Matches", "MMA Podcasts", "MMA Facts"])
+  const [videoFilters, setVideoFilters] = useState(["MMA Matches", "MMA Podcasts", "MMA Facts"]);
+  const [searchedVideo, setsearchedVideo] = useState(null)
+
 
 
   useEffect(() => {
-
-
     (async () => {
       try {
         const res = await GetAllVideos();
@@ -61,7 +61,11 @@ export const VideoProvider = ({ children }) => {
 
   }
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters }} >
+  const getSearchedVideo = (title) => {
+    setsearchedVideo(allVideos.filter((video) => video.title === title))
+  }
+
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo }} >
     {children}
   </VideoContext.Provider>
 }
