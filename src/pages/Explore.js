@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer/Footer"
 import { NavBar } from "../components/Navbar/Navbar"
 import { VideoCardContainer } from "../components/VideoCardContainer/VideoCardContainer"
 import { useVideo } from "../context/VideoContext"
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -18,11 +19,12 @@ export const Explore = () => {
             setSuggestions(suggestionList);
         }
     }, [allVideos])
-    return  <>
+    return <>
         <NavBar />
         <Categories />
         <AutoComplete suggestions={suggestions} />
         <VideoCardContainer />
         <Footer />
+        <ToastContainer />
     </>
 }

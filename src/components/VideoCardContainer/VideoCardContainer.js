@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { useVideo } from "../../context/VideoContext"
+import { handleToast } from "../../utils/toastUtils";
 import { VideoCard } from "../VideoCard/VideoCard"
 import "./VideoCardContainer.css"
 
@@ -14,12 +15,21 @@ export const VideoCardContainer = () => {
 
 
     const handleFilteredData = (category) => {
+
+
         if (!filteredData.includes(category)) {
-            setFilteredData([...filteredData, category])
+            handleToast(`Selecting ${category}`)
+            setTimeout(() => {
+                setFilteredData([...filteredData, category])
+            }, 1500)
         }
         else {
-            const newData = filteredData.filter((c) => c !== category);
-            setFilteredData(newData)
+            handleToast(`Removing ${category}`)
+            setTimeout(() => {
+                const newData = filteredData.filter((c) => c !== category);
+                setFilteredData(newData)
+            }, 1500)
+
         }
 
     }

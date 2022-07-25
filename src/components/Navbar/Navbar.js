@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
+import { handleToast } from "../../utils/toastUtils";
 
 
 export const NavBar = () => {
@@ -14,6 +15,14 @@ export const NavBar = () => {
             setLogged(true)
         }
     }, [token])
+
+    const handleLogout = () => {
+        handleToast("Logout successful");
+        setTimeout(() => {
+            logoutHandler()
+            setLogged(false)
+        }, 1500)
+    }
 
 
     return <nav className="navbar">
@@ -38,7 +47,7 @@ export const NavBar = () => {
             <NavLink to="/explore" className={({ isActive }) => isActive ? "link-active" : "link-not-active"} ><li>EXPLORE</li></NavLink>
             <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>PLAYLISTS</li></NavLink>
             {
-                logged ? <li><button className="btn-signup" onClick={() => (logoutHandler(), setLogged(false))}>LOGOUT</button></li> :
+                logged ? <li><button className="btn-signup" onClick={handleLogout}>LOGOUT</button></li> :
                     <><li><button className="btn-login" onClick={() => (navigate("/login"))}>LOG IN</button></li>
                         <li><button className="btn-signup" onClick={() => (navigate("/signup"))}>SIGN UP</button></li></>
             }
