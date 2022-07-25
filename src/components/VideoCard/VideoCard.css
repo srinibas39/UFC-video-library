@@ -1,5 +1,5 @@
 .videocard {
-  max-width: 22rem;
+  width: 22rem;
   height: 16rem;
   display: flex;
   flex-direction: column;
