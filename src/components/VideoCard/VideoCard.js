@@ -6,6 +6,7 @@ import { useLike } from "../../context/LikeContext";
 import { useWatchlater } from "../../context/WatchlaterContext";
 import "./VideoCard.css"
 import { usePlaylist } from "../../context/PlaylistContext";
+import { handleToast } from "../../utils/toastUtils";
 
 
 
@@ -47,39 +48,66 @@ export const VideoCard = ({ el, playlistId }) => {
         }
     }, [])
 
+    const handleRemoveLike = () => {
+        if (token) {
+            handleToast(`${el.title} video removed from Like `)
+            setTimeout(() => removeLike(token, el._id), 1500)
+        }
+    }
+    const handleRemoveHistory = () => {
+        if (token) {
+            handleToast(`${el.title} video removed from History `)
+            setTimeout(() => removeHistory(token, el._id), 1500)
+        }
+    }
+    const handleRemoveWatchlater = () => {
+        if (token) {
+            handleToast(`${el.title} video removed from Watchlater `)
+            setTimeout(() => removeWatchlater(token, el._id), 1500)
+        }
+    }
+    const handleRemoveVideoPlaylist = () => {
+        if (token) {
+            handleToast(`${el.title} video removed from video Playlist`)
+            setTimeout(() => removeVideoPlaylist(token, playlistId, el._id), 1500)
+
+        }
+    }
+
+
     return <div className="videocard">
         <img src={el.thumbnail}></img>
         <div>
             <p>{el.title}</p>
 
             {
-                likes.length && !explore && btnState.like ? <button className="btn-delete" onClick={() => removeLike(token, el._id)}><span className="material-icons-outlined">
+                likes.length && !explore && btnState.like ? <button className="btn-delete" onClick={handleRemoveLike}><span className="material-icons-outlined">
                     delete
                 </span></button> : ""
 
             }
             {
-                history.length && !explore && btnState.history ? <button className="btn-delete" onClick={() => removeHistory(token, el._id)}><span className="material-icons-outlined">
+                history.length && !explore && btnState.history ? <button className="btn-delete" onClick={handleRemoveHistory}><span className="material-icons-outlined">
                     delete
                 </span></button> : ""
 
             }
             {
-                watchlater.length && !explore && btnState.watchlater ? <button className="btn-delete" onClick={() => removeWatchlater(token, el._id)}><span className="material-icons-outlined">
+                watchlater.length && !explore && btnState.watchlater ? <button className="btn-delete" onClick={handleRemoveWatchlater}><span className="material-icons-outlined">
                     delete
                 </span></button> : ""
 
             }
             {
-                playlistId && btnState.playlist ? <button className="btn-delete" onClick={() => removeVideoPlaylist(token, playlistId, el._id)}><span className="material-icons-outlined">
+                playlistId && btnState.playlist ? <button className="btn-delete" onClick={handleRemoveVideoPlaylist}><span className="material-icons-outlined">
                     delete
                 </span></button> : ""
 
             }
-
+            
         </div>
 
-        <button className="btn-watchnow" onClick={()=>navigate(`/watch/${el._id}`)}>
+        <button className="btn-watchnow" onClick={() => navigate(`/watch/${el._id}`)}>
             Watch Now
         </button>
     </div>
