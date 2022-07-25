@@ -1,9 +1,8 @@
 
-
-import { useEffect } from "react";
 import { Footer } from "../components/Footer/Footer"
 import { Hero } from "../components/Hero/Hero"
 import { NavBar } from "../components/Navbar/Navbar"
+import { ToastContainer } from 'react-toastify';
 
 
 export const Home = () => {
@@ -12,5 +11,6 @@ export const Home = () => {
         <NavBar />
         <Hero />
         <Footer />
+        <ToastContainer/>
     </div>
 }

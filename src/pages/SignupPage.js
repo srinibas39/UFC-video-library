@@ -9,6 +9,5 @@ export const SignupPage = () => {
         <Signup />
         <Footer/>
         <ToastContainer/>
-
     </>
 }

@@ -18,6 +18,7 @@ import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 import { useAuth } from "./context/AuthContext";
 import { UploadPage } from "./pages/UploadPage";
 import { SearchedVideo } from "./components/SearchedVideo/SearchedVideo";
+import { ProfilePage } from "./pages/ProfilePage";
 
 
 
@@ -39,7 +40,7 @@ export const App = () => {
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/upload" element={<UploadPage />} />
       <Route path="/search" element={<SearchedVideo />} />
-
+      <Route path="/profile" element={<ProfilePage />} />
     </Routes>
   </>
 }
