@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { AddHistory } from "../services/AddHistory";
 import { RemoveAllHistory } from "../services/RemoveAllHistory";
 import { RemoveHistory } from "../services/RemoveHistory";
+import { handleToast } from "../utils/toastUtils";
 
 
 export const HistoryContext = createContext();
@@ -30,8 +31,13 @@ export const HistoryProvider = ({ children }) => {
     }
     const removeAllHistory = async (token) => {
         try {
-            const res = await RemoveAllHistory(token);
-            setHistory(res.data.history)
+            handleToast("Removing all the videos from the history")
+            setTimeout(async () => {
+                const res = await RemoveAllHistory(token);
+                setHistory(res.data.history)
+            }, 1500)
+
+
         }
         catch (err) {
             console.log(err);

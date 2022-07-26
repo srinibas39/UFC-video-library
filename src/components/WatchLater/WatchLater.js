@@ -4,16 +4,21 @@ import { useWatchlater } from "../../context/WatchlaterContext"
 import { Categories } from "../Categories/Categories"
 import { VideoCard } from "../VideoCard/VideoCard"
 import "./WatchLater.css"
-import {ReactComponent as WatchlaterSvg} from "../../images/watchlater.svg"
+import { ReactComponent as WatchlaterSvg } from "../../images/watchlater.svg"
+import { handleToast } from "../../utils/toastUtils"
 
 export const WatchLater = () => {
     const { watchlater, removeWatchlater } = useWatchlater();
     const { token } = useAuth();
 
     const handleClearAll = () => {
-        watchlater.forEach(async(video) => {
-            const res=await removeWatchlater(token,video._id);
-        })
+        handleToast("Removing all the videos from watch later")
+        setTimeout(() => {
+            watchlater.forEach(async (video) => {
+                const res = await removeWatchlater(token, video._id);
+            })
+        }, 1500)
+
     }
     return <div className="watchlater-container">
         <Categories />
@@ -27,7 +32,7 @@ export const WatchLater = () => {
                 {
                     watchlater.length ? watchlater.map((el) => {
                         return <VideoCard key={el._id} el={el} />
-                    }):<WatchlaterSvg style={{margin:"1rem"}}/>
+                    }) : <WatchlaterSvg style={{ margin: "1rem" }} />
                 }
             </div>
         </div>

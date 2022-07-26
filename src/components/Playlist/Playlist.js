@@ -3,6 +3,7 @@ import { useAuth } from "../../context/AuthContext";
 import { usePlaylist } from "../../context/PlaylistContext";
 import "./Playlist.css";
 import { ReactComponent as PlaylistSvg } from "../../images/playlist.svg"
+import { handleToast } from "../../utils/toastUtils";
 
 export const Playlist = () => {
 
@@ -11,9 +12,13 @@ export const Playlist = () => {
     const navigate = useNavigate();
 
     const handleClearAll = () => {
-        playlists.forEach((play) => {
-            removePlaylist(token, play._id)
-        })
+        handleToast("Removing all Playlist")
+        setTimeout(() => {
+            playlists.forEach((play) => {
+                removePlaylist(token, play._id)
+            })
+        }, 1500)
+
     }
 
     return <div className="playlist-container">
