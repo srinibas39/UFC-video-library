@@ -1,5 +1,4 @@
 .videocard {
-  width: 22rem;
   height: 16rem;
   display: flex;
   flex-direction: column;
@@ -41,9 +40,10 @@
 
 .videocard div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  max-width: 20rem;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .btn-delete {
@@ -51,6 +51,12 @@
   cursor: pointer;
 }
 
-.btn-delete:hover{
-  color:var(--secondary-color)
+.btn-delete:hover {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 40rem) {
+  .videocard {
+    width: 22rem;
+  }
 }

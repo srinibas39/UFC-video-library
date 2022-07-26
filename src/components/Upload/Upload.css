@@ -9,7 +9,7 @@
 
 .upload{
     height: 20rem;
-    width: 22rem;
+    width: 18rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,19 +21,19 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     justify-content: space-between;
 }
 
 .upload form input{
-    width: 20rem;
     height: 1.5rem;
 }
 
 .upload-container button{
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     width: 5rem;
-    height: 3rem;
+    height: 2rem;
     background-color: #d20a0a;
     border: 2px solid #d20a0a;
     color: white;
@@ -46,4 +46,16 @@
 .upload-container button:hover{
     color: #d20a0a;
     background-color: #fff;
+}
+
+@media (min-width:40rem){
+    .upload{
+        min-width:22rem
+    }
+    .upload-container button{
+        bottom: 0;
+        height: 3rem;
+    }
+    
+
 }
