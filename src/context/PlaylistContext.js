@@ -5,6 +5,7 @@ import { GetAllPlaylists } from "../services/GetAllPlaylists";
 import { GetPlaylistVideos } from "../services/GetPlaylistVideos";
 import { RemovePlaylist } from "../services/RemovePlaylist";
 import { RemoveVideoPlaylist } from "../services/RemoveVideoPlaylist";
+import { handleToastError } from "../utils/toastUtils";
 
 
 export const PlaylistContext = createContext();
@@ -20,7 +21,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylists(res.data.playlists);
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
 
@@ -30,7 +31,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylists(res.data.playlists);
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
 
@@ -41,7 +42,7 @@ export const PlaylistProvider = ({ children }) => {
 
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
 
@@ -51,7 +52,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylist(res.data.playlist)
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
 
@@ -61,7 +62,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylists(res.data.playlists)
         }
         catch (error) {
-            console.log(error);
+            handleToastError(error);
         }
     }
 
@@ -71,7 +72,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylist(res.data.playlist)
         }
         catch (error) {
-            console.log(error);
+            handleToastError(error);
         }
     }
     

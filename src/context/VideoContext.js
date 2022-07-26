@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState, createContext } from "react";
 import { GetAllVideos } from "../services/GetAllVideos";
 import { GetSingleVideo } from "../services/GetSingleVideo";
+import { handleToastError } from "../utils/toastUtils";
 
 
 export const VideoContext = createContext();
@@ -24,7 +25,7 @@ export const VideoProvider = ({ children }) => {
         }
       }
       catch (err) {
-        console.log(err);
+        handleToastError(err);
       }
     })()
 
@@ -39,7 +40,7 @@ export const VideoProvider = ({ children }) => {
       return res.data.video;
     }
     catch (err) {
-      console.log(err);
+      handleToastError(err);
     }
   }
 
@@ -47,8 +48,6 @@ export const VideoProvider = ({ children }) => {
 
     const newAllVideos = allVideos.reduce((a, c) => c._id === videoId ?
       [...a, { ...c, comments: [...c.comments, comment] }] : [...a, c], [])
-
-    console.log(newAllVideos);
 
     setAllVideos([...newAllVideos]);
 

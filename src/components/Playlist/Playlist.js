@@ -21,6 +21,13 @@ export const Playlist = () => {
 
     }
 
+    const handleRemovePlaylist = (playlist) => {
+        handleToast(`Removing playlist ${playlist.playlistName}`);
+        setTimeout(() => {
+            removePlaylist(token, playlist._id)
+        }, 1500)
+    }
+
     return <div className="playlist-container">
         <div className="likes-header">
             <h2>PLAYLISTS</h2>
@@ -35,7 +42,7 @@ export const Playlist = () => {
                             <div>{playlist.playlistName}</div>
                             <div>{playlist.videos.length}</div>
                         </div>
-                        <button onClick={(e) => (e.stopPropagation(), removePlaylist(token, playlist._id))}><span className="material-icons-outlined">
+                        <button onClick={() => handleRemovePlaylist(playlist)}><span className="material-icons-outlined">
                             delete
                         </span></button>
                     </div>

@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { AddHistory } from "../services/AddHistory";
 import { RemoveAllHistory } from "../services/RemoveAllHistory";
 import { RemoveHistory } from "../services/RemoveHistory";
-import { handleToast } from "../utils/toastUtils";
+import { handleToast, handleToastError } from "../utils/toastUtils";
 
 
 export const HistoryContext = createContext();
@@ -17,7 +17,7 @@ export const HistoryProvider = ({ children }) => {
 
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
     const removeHistory = async (token, videoId) => {
@@ -26,7 +26,7 @@ export const HistoryProvider = ({ children }) => {
             setHistory(res.data.history);
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
     const removeAllHistory = async (token) => {
@@ -40,7 +40,7 @@ export const HistoryProvider = ({ children }) => {
 
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
     return <HistoryContext.Provider value={{ addHistory, removeHistory, removeAllHistory, history }}>

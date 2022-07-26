@@ -31,11 +31,15 @@ export const NavBar = () => {
             <NavLink to="/explore" className={({ isActive }) => isActive ? "link-active" : "link-not-active"} ><li>EXPLORE</li></NavLink>
             <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>PLAYLISTS</li></NavLink>
             {
-                token ? <li><button className="btn-signup" onClick={()=>navigate("/profile")}><span class="material-symbols-outlined">
-                account_circle
-                </span></button></li> :
-                    <><li><button className="btn-login" onClick={() => (navigate("/login"))}>LOG IN</button></li>
-                        <li><button className="btn-signup" onClick={() => (navigate("/signup"))}>SIGN UP</button></li></>
+                token ? <li>
+                    <button className="btn-signup" onClick={() => navigate("/profile")}><span class="material-symbols-outlined">
+                        account_circle
+                    </span></button>
+                 </li> :
+                    <>
+                        <li><button className="btn-login" onClick={() => (navigate("/login"))}>LOG IN</button></li>
+                        <li><button className="btn-signup" onClick={() => (navigate("/signup"))}>SIGN UP</button></li>
+                    </>
             }
 
 

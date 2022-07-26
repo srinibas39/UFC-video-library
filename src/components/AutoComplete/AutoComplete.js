@@ -9,7 +9,6 @@ export const AutoComplete = ({ suggestions }) => {
     const { getSearchedVideo } = useVideo();
     const navigate = useNavigate();
 
-
     const [filteredSuggestion, setFiltereSuggestion] = useState([]);
     const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
     const [showSuggestion, setShowSuggestion] = useState(false);
@@ -20,11 +19,12 @@ export const AutoComplete = ({ suggestions }) => {
         setFiltereSuggestion(suggestions.filter((el) => el.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1))
         setShowSuggestion(true);
     }
+
     const handleSearchText = (e) => {
         setSearchText(e.target.innerText);
-        getSearchedVideo(e.target.innerText)
-        navigate("/search")
-        setFiltereSuggestion([])
+        getSearchedVideo(e.target.innerText);
+        navigate("/search");
+        setFiltereSuggestion([]);
         setShowSuggestion(false);
     }
 
@@ -34,6 +34,8 @@ export const AutoComplete = ({ suggestions }) => {
             setSearchText(filteredSuggestion[activeSuggestionIndex]);
             setFiltereSuggestion([]);
             setShowSuggestion(false)
+            getSearchedVideo(filteredSuggestion[activeSuggestionIndex]);
+            navigate("/search");
         }
         else if (e.keyCode === 38) {
             if (activeSuggestionIndex === 0) {

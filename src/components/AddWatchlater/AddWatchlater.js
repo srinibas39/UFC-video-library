@@ -24,7 +24,6 @@ export const AddWatchLater = ({ video }) => {
         if (token) {
             handleToast("Adding video to watch later")
             setTimeout(() => addWatchlater(token, video), 1500)
-
         }
         else {
             navigate("/login")
@@ -34,7 +33,6 @@ export const AddWatchLater = ({ video }) => {
         if (token) {
             handleToast("Removing video from watchlater")
             setTimeout(() => removeWatchlater(token, video._id), 1500)
-
         }
         else {
             navigate("/login")

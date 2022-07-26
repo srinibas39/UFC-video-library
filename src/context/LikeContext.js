@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AddLike } from "../services/AddLike";
 import { GetLike } from "../services/GetLike";
 import { RemoveLike } from "../services/RemoveLike";
+import { handleToastError } from "../utils/toastUtils";
 
 
 export const LikeContext = createContext();
@@ -17,7 +18,7 @@ export const LikeProvider = ({ children }) => {
             setLikes(res.data.likes)
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
     const removeLike = async (token, videoId) => {
@@ -26,14 +27,14 @@ export const LikeProvider = ({ children }) => {
             setLikes(res.data.likes)
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
 
     const getLike = async (token) => {
         try {
             const res = await GetLike(token);
-            setLikes(res.data.likes);
+           handleToastError(res.data.likes);
         }
         catch (err) {
             console.log(err);

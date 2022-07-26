@@ -2,6 +2,7 @@ import { createContext, useContext } from "react";
 import { useState } from "react";
 import { AddWatchlater } from "../services/AddWatchlater";
 import { RemoveWatchlater } from "../services/RemoveWatchlater";
+import { handleToastError } from "../utils/toastUtils";
 
 
 export const WatchlaterContext = createContext();
@@ -18,7 +19,7 @@ export const WatchlaterProvider = ({ children }) => {
 
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
     const removeWatchlater = async (token, videoId) => {
@@ -28,7 +29,7 @@ export const WatchlaterProvider = ({ children }) => {
 
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err);
         }
     }
     return <WatchlaterContext.Provider value={{ addWatchlater, watchlater, removeWatchlater }}>

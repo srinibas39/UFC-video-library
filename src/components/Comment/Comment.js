@@ -40,8 +40,8 @@ export const Comment = () => {
         </div>
         <div className="comment-body">
             {
-                video && video.comments.map((vid, idx) => {
-                    return <div className="comment-text" key={idx}>{vid}</div>
+                video && video.comments.map((com, idx) => {
+                    return <div className="comment-text" key={idx}>{com}</div>
                 })
             }
         </div>
