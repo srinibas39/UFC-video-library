@@ -16,7 +16,7 @@
 + Logout
 + Responsiveness
 
-##Tech stack
+## Tech stack
 + HTML
 + CSS
 + Javascript
