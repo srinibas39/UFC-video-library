@@ -20,7 +20,6 @@ export const VideoProvider = ({ children }) => {
       try {
         const res = await GetAllVideos();
         if (res.status === 200 || res.status === 201) {
-
           setAllVideos([...res.data.videos]);
         }
       }
@@ -53,6 +52,13 @@ export const VideoProvider = ({ children }) => {
 
   }
 
+  const removeComment = (comment, videoId) => {
+    const newAllVideos = allVideos.reduce((a, c) => c._id === videoId ?
+      [...a, { ...c, comments: c.comments.filter((el) => el !== comment) }] : [...a, c], [])
+
+    setAllVideos([...newAllVideos])
+  }
+
   const addVideo = (video) => {
     setAllVideos([...allVideos, video])
     if (!videoFilters.includes(video.category))
@@ -64,7 +70,7 @@ export const VideoProvider = ({ children }) => {
     setsearchedVideo(allVideos.filter((video) => video.title === title))
   }
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo }} >
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo, removeComment }} >
     {children}
   </VideoContext.Provider>
 }

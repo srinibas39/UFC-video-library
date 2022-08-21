@@ -3,7 +3,7 @@ import { Comment } from "../Comment/Comment";
 import "./VideoComponent.css";
 import { useHistory } from "../../context/HistoryContext";
 import { useAuth } from "../../context/AuthContext";
-import React, { useEffect } from 'react'
+import React from 'react'
 import ReactPlayer from 'react-player'
 
 

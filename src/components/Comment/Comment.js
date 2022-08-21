@@ -5,7 +5,7 @@ import { handleToast, handleToastWarning } from "../../utils/toastUtils";
 import "./Comment.css"
 export const Comment = () => {
     const [comment, setComment] = useState("");
-    const { addComments, allVideos } = useVideo();
+    const { addComments, allVideos, removeComment } = useVideo();
     const { videoId } = useParams();
     const [video, setVideo] = useState(null);
 
@@ -19,19 +19,23 @@ export const Comment = () => {
 
 
     const handleComments = () => {
-
         if (comment) {
-            handleToast("Comment added successfully")
+            handleToast(`comment-'${comment}' added successfully`)
             setTimeout(() => {
                 addComments(comment, videoId)
                 setComment("");
-            },1500)
+            }, 1500)
 
         }
         else {
             handleToastWarning("Please fill the comment box")
         }
 
+    }
+
+    const handleRemoveComments = (com, videoId) => {
+        handleToast(`comment-'${com}' successfully deleted`)
+        setTimeout(() => removeComment(com, videoId), 1500)
     }
 
     return <div className="comment">
@@ -41,7 +45,12 @@ export const Comment = () => {
         <div className="comment-body">
             {
                 video && video.comments.map((com, idx) => {
-                    return <div className="comment-text" key={idx}>{com}</div>
+                    return <div className="comment-box">
+                        <div className="comment-text" key={idx}>{com}</div>
+                        <span className="material-symbols-outlined comment-delete" onClick={() => handleRemoveComments(com, video._id)}>
+                            delete
+                        </span>
+                    </div>
                 })
             }
         </div>

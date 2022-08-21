@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
             if (status === 200 || status === 201) {
                 localStorage.setItem("login", JSON.stringify({ token: data.encodedToken, user: data.createdUser }))
             }
-            setUser(data.foundUser);
+            setUser(data.createdUser);
             setToken(data.encodedToken);
 
         }
