@@ -13,6 +13,7 @@
     align-items: center;
     padding: 1rem;
     box-shadow: 0px 0px 10px 4px #aaa;
+    cursor: pointer;
 }
 .playlist-text{
     height: 100%;
@@ -22,7 +23,6 @@
     width: 83%;
 }
 .playlists button{
-    height: 2rem;
     cursor: pointer;
 }
 
@@ -31,13 +31,4 @@
 
 }
 
-.playlist-container{
-    width: 89vw;
-    margin: 1rem;
-    font-family: 'DIN 2014', sans-serif; 
-    font-weight: 700;
 
-}
-.playlist-container h2{
-    margin: 2rem;
-}

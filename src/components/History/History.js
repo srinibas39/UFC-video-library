@@ -1,19 +1,27 @@
-import { useFilter } from "../../context/FilterContext"
+import { useAuth } from "../../context/AuthContext"
+import { useHistory } from "../../context/HistoryContext"
 import { Categories } from "../Categories/Categories"
 import { VideoCard } from "../VideoCard/VideoCard"
-import "./History.css"
+import "./History.css";
+import {ReactComponent as Historysvg} from "../../images/history.svg"
 
 export const History = () => {
-    const { state } = useFilter()
+    const { history, removeAllHistory } = useHistory();
+    const { token } = useAuth();
+
+
     return <div className="history-container">
         <Categories />
         <div className="history">
-            <h2>HISTORY</h2>
+            <div className="likes-header">
+                <h2>HISTORY</h2>
+                <button onClick={() => removeAllHistory(token)}>Clear All</button>
+            </div>
             <div className="card-container">
                 {
-                    state.history && state.history.map((el, idx) => {
+                    history.length ? history.map((el, idx) => {
                         return <VideoCard key={idx} el={el} />
-                    })
+                    }):<Historysvg style={{margin:"1rem"}}/>
                 }
             </div>
         </div>

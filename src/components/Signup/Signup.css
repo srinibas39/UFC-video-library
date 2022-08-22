@@ -7,12 +7,13 @@
 
 .signup {
   height: 24rem;
-  width: 24rem;
+  width: 18rem;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0px 0px 10px 4px #aaa;
+  font-size: 0.8rem;
 }
 .signup h2 {
   text-align: center;
@@ -58,4 +59,11 @@
 .terms input {
   margin-right: 5px;
   cursor: pointer;
+}
+
+@media (min-width: 30rem) {
+  .signup{
+    width: 22rem;
+    font-size: 1rem;
+  }
 }

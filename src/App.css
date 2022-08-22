@@ -1,3 +1,22 @@
-.main{
-    display: flex;
+:root {
+  --primary-color: #9e0808;
+  --secondary-color: #d20a0a;
+  --box-shadow1: 0px 0px 10px 2px #aaa;
+  --box-shadow2: 0px 0px 0 0.5px #aaa;
+  --footer-color: #18181b;
+  --secondary-color2: #fff;
+  --secondary-color3: #7f1d1d;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fee2e2;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
 }

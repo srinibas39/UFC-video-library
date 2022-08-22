@@ -5,16 +5,17 @@
     align-items: center;
     
 }
-
 .video-player{
-    height: 70vh;
-    width: 80vw;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    
-
+  height: 100vh;
+  width: 85vw;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+
+
 iframe{
     height: 100%;
     width: 100%;
@@ -23,5 +24,16 @@ iframe{
 .video-iframe{
     height: 100%;
     width: 100%;
+}
+
+@media (min-width:40rem){
+    .video-player{
+        height: 70vh;
+        width: 85vw;
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 

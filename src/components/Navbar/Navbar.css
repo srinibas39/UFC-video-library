@@ -1,14 +1,13 @@
 .navbar {
-    background-color: rgba(34, 34, 34, 0.88);
-    height: 12vh;
-    color: #fff;
-    font-family: 'DIN 2014', sans-serif;
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    /* position: sticky;
-    top: 0px; */
+  font-size: 0.6rem;
+  background-color: rgba(34, 34, 34, 0.88);
+  height: 12vh;
+  color: #fff;
+  font-family: "DIN 2014", sans-serif;
+  display: flex;
+  justify-content: space-between;
 }
+
 .navbar ul {
   display: flex;
   justify-content: end;
@@ -22,47 +21,72 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.btn-login{
-    padding: 10px;
-    border: 1px solid #fff;
-    background: none;
-    color: white;
-    font-weight: 700;
-    font-family: 'DIN 2014', sans-serif;
-    cursor: pointer;
+.btn-login {
+  padding: 2px;
+  border: 1px solid #fff;
+  background: none;
+  color: white;
+  font-weight: 700;
+  font-family: "DIN 2014", sans-serif;
+  cursor: pointer;
+  font-size: 0.6rem;
 }
-.btn-login:hover{
-    
-    background-color: #d20a0a;
-}
-.btn-signup{
+.btn-login:hover {
+  background-color: #d20a0a;
   
-    background-color: #9e0808;
+}
+.btn-signup {
+  background-color: #9e0808;
+  padding: 2px;
+  color: white;
+  font-weight: 700;
+  font-family: "DIN 2014", sans-serif;
+  cursor: pointer;
+  border: 1px solid #9e0808;
+  font-size: 0.6rem;
+}
+
+.btn-signup:hover {
+  background-color: #d20a0a;
+  
+}
+
+.svg {
+  height: 100%;
+  width: 40%;
+  cursor: pointer;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+.link-active {
+  color: #d20a0a;
+  text-decoration: none;
+}
+.link-not-active {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width:30rem) {
+  .navbar {
+    font-size: 1rem;
     padding: 10px;
-    color: white;
-    font-weight: 700;
-    font-family: 'DIN 2014', sans-serif;
-    cursor: pointer;
-    border: 1px solid #9e0808;
-}
-.btn-signup:hover{
-    background-color: #d20a0a;
-}
-.svg{
+  }
+  .svg {
     height: 100%;
     width: 20%;
-    cursor: pointer;
-    
+  }
+
+  .btn-signup {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .btn-login{
+    padding: 10px;
+    font-size: 0.8rem;
+  }
 }
-svg{
-    height: 100%;
-    width: 100%;
-}
-.link-active{
-  color:#d20a0a;
-  text-decoration: none;
-}
-.link-not-active{
-  color:#fff;
-  text-decoration: none;
-}
+

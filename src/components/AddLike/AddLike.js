@@ -1,28 +1,64 @@
-import { useParams } from "react-router-dom";
-import { useFilter } from "../../context/FilterContext";
-import { useVideo } from "../../context/VideoContext";
+
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import { useLike } from "../../context/LikeContext";
+import { handleToast } from "../../utils/toastUtils";
 import "../VideoOptions/VideoOption.css"
 
 
-export const AddLike = () => {
-    const { state, dispatch } = useFilter()
-    const { videoId } = useParams();
-    const { allVideos } = useVideo();;
-    const videoItem = allVideos.find((el) => el._id === videoId);
-    const like = state.likes.find((ele) => ele._id === videoId);
+export const AddLike = ({ video }) => {
+
+
+    const { addLike, likes, removeLike } = useLike();
+    const { token } = useAuth();
+    const [videoItem, setVideoItem] = useState({});
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const videoItem = likes.find((el) => el._id === video._id);
+        setVideoItem(videoItem)
+    })
+
+    const handleLike = () => {
+        if (token) {
+            handleToast("like added in the video successfully");
+            setTimeout(() => {
+                addLike({ token, video })
+            }, 1500)
+        }
+        else {
+            navigate("/login")
+        }
+
+    }
+
+    const handleRemoveLike = () => {
+        if (token) {
+            handleToast("like removed from the video succesfully");
+            setTimeout(() => {
+                removeLike(token, video._id)
+            }, 1500)
+        }
+        else {
+            navigate("/login")
+        }
+    }
 
     return <>
-        {
-            like ? <li><span className={"material-icons like "}
-                onClick={() => dispatch({ type: "REMOVE_LIKE", payload: videoItem })}>
-                thumb_up_alt
-            </span><div>Likes</div></li> :
-            <li><span className={"material-icons"}
-                    onClick={() => dispatch({ type: "ADD_LIKE", payload: videoItem })}>
-                    thumb_up_alt
-            </span><div>Likes</div></li>
 
+        {
+            videoItem ? <li><span className={"material-icons like "}
+                onClick={handleRemoveLike}>
+                thumb_up_alt
+            </span></li> :
+                <li><span className={"material-icons"}
+                    onClick={handleLike}>
+                    thumb_up_alt
+                </span></li>
         }
+
+
     </>
 
 

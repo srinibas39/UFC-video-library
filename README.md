@@ -7,13 +7,21 @@
 + Like/Dislike
 + Watch Later
 + History
++ Filter Videos by Category
++ Comment management
++ Upload Video
++ Profile
++ Sign-up
++ Login
++ Logout
++ Responsiveness
 
-##Tech stack
+## Tech stack
 + HTML
 + CSS
-+ javascript
++ Javascript
 + React 
-+ UseContext
++ React Context API
 + API calls
 
 

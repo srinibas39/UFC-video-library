@@ -97,8 +97,7 @@ export function makeServer({ environment = "development" } = {}) {
       // watch later routes (private)
       this.get("/user/watchlater", getWatchLaterVideosHandler.bind(this));
       this.post("/user/watchlater", addItemToWatchLaterVideos.bind(this));
-      this.delete(
-        "/user/watchlater/:videoId",
+      this.delete( "/user/watchlater/:videoId",
         removeItemFromWatchLaterVideos.bind(this)
       );
 

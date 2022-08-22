@@ -1,65 +1,83 @@
-import { useParams } from "react-router-dom";
-import { useFilter } from "../../context/FilterContext";
-import { useVideo } from "../../context/VideoContext";
-import { useState } from "react"
+
+import { useState, useEffect } from "react"
 import "./PlaylistModal.css"
-
-export const PlaylistModal = ({ setOpenPlaylistModal }) => {
-    const { state, dispatch } = useFilter();
-    const { videoId } = useParams();
-    const { allVideos } = useVideo();
-
-    const getVideo = (videoId, allVideos) => {
-        const videoItem = allVideos.find((el) => el._id === videoId);
-        return videoItem;
-    }
-
-    const videoItem = getVideo(videoId, allVideos);
-
-
-    const [playlist, setPlaylist] = useState("");
-
-    const [newAllVideos, setNewAllVideos] = useState(allVideos);
-    const handlePlaylist = (play) => {
-        setNewAllVideos(() => {
-            const newVideos = [...allVideos];
-            newVideos.forEach((ele) => {
-                if (ele._id === videoId) {
-                    if (!ele.playlist.includes(play)) {
-                        ele.playlist = [...ele.playlist, play];
-                    }
-                }
-            })
-            return newVideos;
-
-        })
-
-        dispatch({ type: "UPDATE_ALL_VIDEOS", payload: newAllVideos })
-
-    }
+import { usePlaylist } from "../../context/PlaylistContext";
+import { useAuth } from "../../context/AuthContext";
+import { handleToast, handleToastWarning } from "../../utils/toastUtils";
 
 
 
+export const PlaylistModal = ({ setOpenPlaylistModal, video }) => {
 
-    return <ul className="playlist-modal" >
-        <div className="playlist-header">
-            <p>Add To Playlist</p>
-            <button onClick={() => setOpenPlaylistModal(false)}><span class="material-icons-outlined">
-                close
-            </span></button>
-        </div>
-        {
-            state.playlists && state.playlists.map((el, idx) => {
-                return <li key={idx} onClick={() => handlePlaylist(el)}><span class="material-icons-outlined"  >
-                    add
-                </span>{el}</li>
-            })
+
+    const { playlists, addPlaylist, addVideoPlaylist, removeVideoPlaylist, getAllPlaylists } = usePlaylist();
+    const { token } = useAuth();
+    const [playlistName, setPlaylistName] = useState("");
+
+    const handlePlaylists = (e, playlistId) => {
+        if (e.target.checked) {
+            handleToast("Adding your video in the playlist");
+            setTimeout(() => {
+                addVideoPlaylist(token, playlistId, video);
+                getAllPlaylists(token);
+            }, 1500)
+
+
+        }
+        else {
+            handleToast("Removing your video from the playlist");
+            setTimeout(() => {
+                removeVideoPlaylist(token, playlistId, video._id);
+                getAllPlaylists(token)
+            }, 1500)
+
         }
 
-        <div className="playlist-input">
-            <input value={playlist} onChange={(e) => setPlaylist(e.target.value)} placeholder="Type your playlist"></input>
-            <button onClick={() => (dispatch({ type: "ADD_PLAYLIST", payload: playlist }), setPlaylist(""))}>Add</button>
-        </div>
-    </ul>
+    }
+
+    const addPlaylistName = () => {
+        if (playlistName.trim().length) {
+            handleToast("Adding Playlist");
+            setTimeout(() => {
+                addPlaylist(token, { playlistName })
+                setPlaylistName("")
+            }, 1500)
+        }
+        else {
+            handleToastWarning("Playlist field cannot be empty");
+        }
+    }
+
+    const playlistModalClose = () => {
+        handleToast("Closing the playlist model");
+        setTimeout(() => {
+            setOpenPlaylistModal(false)
+        }, 1500)
+
+    }
+
+
+
+
+    return <div className="playlist-modal-container">
+        <ul className="playlist-modal" >
+            <div className="playlist-header">
+                <p>Add To Playlist</p>
+                <button onClick={playlistModalClose}><span className="material-icons-outlined">
+                    close
+                </span></button>
+            </div>
+            {
+                playlists && playlists.map((playlist) => {
+                    return <li key={playlist._id}><input type="checkbox" checked={playlist.videos.some((vid) => vid._id === video._id)} style={{ marginRight: "5px", cursor: "pointer" }} onChange={(e) => handlePlaylists(e, playlist._id)} />{playlist.playlistName}</li>
+                })
+            }
+
+            <div className="playlist-input">
+                <input value={playlistName} onChange={(e) => setPlaylistName(e.target.value)} placeholder="Type your playlist"></input>
+                <button onClick={addPlaylistName}>Add</button>
+            </div>
+        </ul>
+    </div>
 
 }
