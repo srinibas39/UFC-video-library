@@ -28,7 +28,7 @@
 }
 
 .video-filters button{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color3);
     padding: 0.5rem;
     color:#fff;
     margin: 0 1rem;
@@ -48,5 +48,5 @@
 }
 
 #primary{
-    background-color: var(--secondary-color3);
+    background-color: var(--secondary-color);
 }
