@@ -4,10 +4,10 @@ import { WatchLater } from "../components/WatchLater/WatchLater"
 import { ToastContainer } from "react-toastify"
 
 export const WatchLaterPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <WatchLater />
         <Footer />
         <ToastContainer />
-    </>
+    </div>
 }

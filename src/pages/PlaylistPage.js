@@ -6,11 +6,11 @@ import { ToastContainer } from "react-toastify"
 
 
 export const PlayListPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <Categories />
         <Playlist />
         <Footer/>
         <ToastContainer/>
-    </>
+    </div>
 }

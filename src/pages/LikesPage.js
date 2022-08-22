@@ -4,10 +4,10 @@ import { NavBar } from "../components/Navbar/Navbar"
 import { ToastContainer } from "react-toastify"
 
 export const LikesPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <Like/>
         <Footer/>
         <ToastContainer/>
-    </>
+    </div>
 }

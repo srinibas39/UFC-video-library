@@ -4,10 +4,10 @@ import { Signup } from "../components/Signup/Signup"
 import { ToastContainer } from "react-toastify"
 
 export const SignupPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <Signup />
         <Footer/>
         <ToastContainer/>
-    </>
+    </div>
 }

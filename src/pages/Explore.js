@@ -19,12 +19,12 @@ export const Explore = () => {
             setSuggestions(suggestionList);
         }
     }, [allVideos])
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <Categories />
         <AutoComplete suggestions={suggestions} />
         <VideoCardContainer />
         <Footer />
         <ToastContainer />
-    </>
+    </div>
 }

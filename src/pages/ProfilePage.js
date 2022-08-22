@@ -4,10 +4,10 @@ import { NavBar } from "../components/Navbar/Navbar"
 import { Profile } from "../components/Profile/Profile"
 
 export const ProfilePage = () => {
-    return <>
+    return <div>
         <NavBar />
         <Categories />
         <Profile />
         <Footer />
-    </>
+    </div>
 }

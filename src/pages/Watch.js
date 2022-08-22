@@ -20,7 +20,7 @@ export const Watch = () => {
 
     });
 
-    return videoItem && <>
+    return videoItem && <div style={{height:"100vh"}}>
 
         <NavBar />
         <Categories/>
@@ -28,5 +28,5 @@ export const Watch = () => {
         <VideoOption videoItem={videoItem} />
         <Footer />
         <ToastContainer/>
-    </>
+    </div>
 }

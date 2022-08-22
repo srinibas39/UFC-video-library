@@ -4,10 +4,10 @@ import { PlaylistVideo } from "../components/PlaylistVideo/PlaylistVideo"
 import { ToastContainer } from "react-toastify"
 
 export const PlaylistVideoPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <PlaylistVideo />
         <Footer />
         <ToastContainer/>
-    </>
+    </div>
 }
