@@ -45,6 +45,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
 }
 
 #primary{

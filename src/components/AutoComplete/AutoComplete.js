@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { useMode } from "../../context/ModeContext";
 import { useVideo } from "../../context/VideoContext";
 import "./AutoComplete.css"
 
@@ -13,6 +14,8 @@ export const AutoComplete = ({ suggestions }) => {
     const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
     const [showSuggestion, setShowSuggestion] = useState(false);
     const [searchText, setSearchText] = useState("");
+    const { mode } = useMode();
+
 
     const handleSearch = (e) => {
         setSearchText(e.target.value);
@@ -60,7 +63,7 @@ export const AutoComplete = ({ suggestions }) => {
     const SuggestionList = () => {
         return <>
             {filteredSuggestion.length ?
-                <ul>
+                <ul id={mode ? `dark` : ""}>
                     {
                         filteredSuggestion.map((el, idx) => {
                             return <li key={idx} className={activeSuggestionIndex === idx ? "auto-input" : ""} onClick={handleSearchText}>{el}</li>
@@ -79,8 +82,8 @@ export const AutoComplete = ({ suggestions }) => {
 
     }
 
-    return <div className="search-con">
-        <input type="search" placeholder={"Type To search"} value={searchText} onChange={handleSearch} onKeyDown={handlekeyDown} />
+    return <div className="search-con" id={mode ? `dark` : ""}>
+        <input id={mode ? `dark` : ""} type="search" placeholder={"Type To search"} value={searchText} onChange={handleSearch} onKeyDown={handlekeyDown} />
         <span className="material-icons-outlined"> search </span>
         {showSuggestion && searchText && <SuggestionList />}
     </div>

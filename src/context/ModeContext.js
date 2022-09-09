@@ -1,6 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { ModeProviderProps, ModeProviderValueProps } from "./ModeContext.types";
-
 
 
 export const ModeContext = createContext();
