@@ -5,11 +5,13 @@ import { VideoCard } from "../VideoCard/VideoCard"
 import "./PlaylistVideo.css"
 import { useAuth } from "../../context/AuthContext"
 import { usePlaylist } from "../../context/PlaylistContext"
+import { useMode } from "../../context/ModeContext"
 export const PlaylistVideo = () => {
 
     const { removeVideoPlaylist, getPlaylistVideos, playlist, getAllPlaylists } = usePlaylist();
     const { playlistId } = useParams();
     const { token } = useAuth();
+    const {mode}=useMode()
 
     useEffect(() => {
         getPlaylistVideos(token, playlistId);
@@ -23,7 +25,7 @@ export const PlaylistVideo = () => {
     }
     return <>
         {
-            playlist && <div className="playlistVideo-container">
+            playlist && <div className="playlistVideo-container" id={mode?"dark":""}>
 
                 <Categories />
                 <div className="playlistVideo">
@@ -32,7 +34,7 @@ export const PlaylistVideo = () => {
                         <button onClick={handleClearAll}>Clear All</button>
                     </div>
 
-                    <div className="card-container">
+                    <div className="card-container" >
                         {
                             playlist.videos && playlist.videos.map((video) => {
                                 return <VideoCard el={video} key={video._id} playlistId={playlistId} />

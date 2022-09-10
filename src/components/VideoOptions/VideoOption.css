@@ -1,6 +1,8 @@
 .video-option-container {
   display: flex;
   justify-content: center;
+  border-bottom: 4px solid var(--primary-color);
+  padding-bottom: 1rem;
 }
 
 .video-option {

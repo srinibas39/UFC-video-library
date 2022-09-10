@@ -5,6 +5,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-top: 2px;
 }
 
 .upload{
@@ -27,6 +30,8 @@
 
 .upload form input{
     height: 1.5rem;
+    outline: none;
+    padding: 4px;
 }
 
 .upload-container button{

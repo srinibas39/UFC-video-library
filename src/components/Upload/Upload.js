@@ -4,6 +4,7 @@ import "./Upload.css"
 import { v4 as uuid } from "uuid";
 import { useVideo } from "../../context/VideoContext";
 import { handleToast, handleToastWarning } from "../../utils/toastUtils";
+import { useMode } from "../../context/ModeContext";
 
 export const Upload = () => {
 
@@ -16,6 +17,7 @@ export const Upload = () => {
         category: "",
         comments: []
     })
+    const { mode } = useMode()
     const handleUpload = () => {
         if (form.title && form.video && form.thumbnail && form.description && form.category) {
             handleToast("Upload Successful")
@@ -38,9 +40,9 @@ export const Upload = () => {
         }
     }
     return <>
-        <div className="upload-container">
-            <div className="upload">
-                <form>
+        <div className="upload-container" id={mode ? "dark" : ""}>
+            <div className="upload" >
+                <form id={mode?"dark-font":""}>
 
                     <label htmlFor="title">Enter Title</label>
                     <input type="text" value={form.title} className="title" onChange={(e) => setForm({ ...form, title: e.target.value })} />

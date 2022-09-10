@@ -7,6 +7,7 @@ import { useWatchlater } from "../../context/WatchlaterContext";
 import "./VideoCard.css"
 import { usePlaylist } from "../../context/PlaylistContext";
 import { handleToast } from "../../utils/toastUtils";
+import { useMode } from "../../context/ModeContext";
 
 
 
@@ -74,8 +75,10 @@ export const VideoCard = ({ el, playlistId }) => {
         }
     }
 
+    const {mode}=useMode()
 
-    return <div className="videocard">
+
+    return <div className="videocard" id={mode?"dark-font":""}>
         <img src={el.thumbnail}></img>
         <div>
             <p>{el.title}</p>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useMode } from "../../context/ModeContext";
 import { useVideo } from "../../context/VideoContext";
 import { handleToast, handleToastWarning } from "../../utils/toastUtils";
 import "./Comment.css"
@@ -8,6 +9,7 @@ export const Comment = () => {
     const { addComments, allVideos, removeComment } = useVideo();
     const { videoId } = useParams();
     const [video, setVideo] = useState(null);
+    const {mode}=useMode()
 
 
 
@@ -39,7 +41,7 @@ export const Comment = () => {
     }
 
     return <div className="comment">
-        <div className="comment-header">
+        <div className="comment-header" id={mode?"dark-font":""}>
             Comment Here
         </div>
         <div className="comment-body">
