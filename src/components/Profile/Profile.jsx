@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { useAuth } from "../../context/AuthContext";
+import { useMode } from "../../context/ModeContext";
 import { handleToast } from "../../utils/toastUtils";
 import "./Profile.css";
 export const Profile = () => {
@@ -15,10 +16,11 @@ export const Profile = () => {
       navigate("/explore");
     }, 1500);
   };
+  const { mode } = useMode();
 
   return (
     <>
-      <div className="profile">
+      <div className="profile" id={mode ? "dark" : ""}>
         <div className="profile-header">
           <h2>PROFILE</h2>
         </div>
