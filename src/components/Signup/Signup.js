@@ -23,6 +23,12 @@ export const Signup = () => {
             handleToastWarning("Please fill up the sign up form");
         }
     }
+    const handleSignupData = () => {
+        handleToast("filled up with Dummy Data");
+        setTimeout(()=>{
+           setForm({...form,email:"sriyasri39@gmail.com",password:"12345678",firstName:"Sriyasri",lastName:"Khuntia"})
+        },0)
+    }
 
     return <>
         <div className="signup-container">
@@ -45,18 +51,14 @@ export const Signup = () => {
                     <input type="password" name="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
                 </div>
 
-                <div className="terms">
-                    <input type="checkbox" name="remember-me" />
-                    <label htmlFor="terms">{`I accept all terms & conditions`}</label>
-                </div>
-
                 <button className="btn-register" onClick={handleSignup}>Create New Account</button>
+                <button className="btn-register" onClick={handleSignupData}>Fill up with Dummy details</button>
                 <div className="account-login" onClick={() => navigate("/login")}>
                     <p>Already have an account</p>
                     <span className="material-icons"> arrow_forward_ios </span>
                 </div>
             </div>
         </div>
-        <ToastContainer/>
+        <ToastContainer />
     </>
 }

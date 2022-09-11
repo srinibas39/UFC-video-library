@@ -53,13 +53,7 @@ export const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
                 </div>
-                <div className="forgotP-container">
-                    <div className="remember">
-                        <input type="checkbox" name="remember-me" />
-                        <label htmlFor="remember-me">Remember Me</label>
-                    </div>
-                    <a href="#">Forgot Your Password ?</a>
-                </div>
+
                 <button className="btn-logins" onClick={handleLogin}>Login</button>
                 <button className="btn-logins" onClick={handleGuestLogin}>Guest Login</button>
 
