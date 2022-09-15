@@ -20,7 +20,7 @@ export const Explore = () => {
             const suggestionList = allVideos.map((el) => el.title)
             setSuggestions(suggestionList);
         }
-    }, [])
+    }, [allVideos])
 
 
     return <div style={{ height: "100vh" }} id={mode ? `dark` : ""} >
