@@ -23,7 +23,7 @@ export const Login = () => {
             handleToast("login successful")
             setTimeout(() => {
                 loginHandler(form.email, form.password);
-                navigate("/explore");
+                
             }, 1500)
 
         }
@@ -36,7 +36,7 @@ export const Login = () => {
         handleToast("login successful")
         setTimeout(() => {
             loginHandler("srinibaskhuntia39@gmail.com", "srinibaskhuntia");
-            navigate("/explore");
+           
         }, 1500)
 
     }
