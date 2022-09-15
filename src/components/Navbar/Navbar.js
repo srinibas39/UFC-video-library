@@ -34,7 +34,7 @@ export const NavBar = () => {
             <NavLink to="/playlist" className={({ isActive }) => isActive ? "link-active" : "link-not-active"}> <li>PLAYLISTS</li></NavLink>
             {
                 token ? <li>
-                    <button className="btn-signup" onClick={() => navigate("/profile")}><span class="material-symbols-outlined">
+                    <button className="btn-signup" onClick={() => navigate("/profile")}><span className="material-symbols-outlined">
                         account_circle
                     </span></button>
                 </li> :
