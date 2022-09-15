@@ -36,7 +36,7 @@ export const Categories = () => {
                     dark_mode
                 </span><div>Dark</div></li></Link> :
                 <Link to="#" style={{ textDecoration: "none" }}>
-                    <li id={mode ? `dark` : ""} onClick={() => setMode(false)}> <span class="material-symbols-outlined">
+                    <li id={mode ? `dark` : ""} onClick={() => setMode(false)}> <span className="material-symbols-outlined">
                         light_mode
                     </span><div>Light</div></li></Link>
         }
