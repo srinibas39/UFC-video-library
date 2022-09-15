@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useMode } from "../../context/ModeContext";
 import { useVideo } from "../../context/VideoContext"
 import { handleToast } from "../../utils/toastUtils";
 import { VideoCard } from "../VideoCard/VideoCard"
@@ -11,6 +12,8 @@ export const VideoCardContainer = () => {
     const { allVideos, videoFilters } = useVideo();
 
     const [filteredData, setFilteredData] = useState([]);
+    const { mode } = useMode();
+
 
 
 
@@ -33,8 +36,6 @@ export const VideoCardContainer = () => {
         }
 
     }
-
-
     const getFilteredData = () => {
 
         if (filteredData.length) {
@@ -55,7 +56,7 @@ export const VideoCardContainer = () => {
 
     return <>
 
-        <div className="video-filters">
+        <div className="video-filters" id={mode ? `dark` : ""}>
             {
                 videoFilters.map((category) => {
                     return <button key={category} id={filteredData.includes(category) ? `primary` : ""}
@@ -65,8 +66,8 @@ export const VideoCardContainer = () => {
 
 
         </div>
-        <div className="videocard-container">
-            <div className="video-header">
+        <div className="videocard-container" id={mode ? `dark` : ""}>
+            <div className="video-header" >
                 <h2>EXPLORE</h2>
             </div>
             <div className="all-videos">

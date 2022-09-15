@@ -6,10 +6,12 @@ import { VideoCard } from "../VideoCard/VideoCard"
 import "./WatchLater.css"
 import { ReactComponent as WatchlaterSvg } from "../../images/watchlater.svg"
 import { handleToast } from "../../utils/toastUtils"
+import { useMode } from "../../context/ModeContext"
 
 export const WatchLater = () => {
     const { watchlater, removeWatchlater } = useWatchlater();
     const { token } = useAuth();
+    const {mode}=useMode()
 
     const handleClearAll = () => {
         handleToast("Removing all the videos from watch later")
@@ -20,7 +22,7 @@ export const WatchLater = () => {
         }, 1500)
 
     }
-    return <div className="watchlater-container">
+    return <div className="watchlater-container" id={mode?"dark":""}>
         <Categories />
         <div className="watchlater">
             <div className="watchlater-header">
@@ -32,7 +34,7 @@ export const WatchLater = () => {
                 {
                     watchlater.length ? watchlater.map((el) => {
                         return <VideoCard key={el._id} el={el} />
-                    }) : <WatchlaterSvg style={{ margin: "1rem" }} />
+                    }) : <WatchlaterSvg style={{ margin: "1rem" ,height:"30rem"}} />
                 }
             </div>
         </div>

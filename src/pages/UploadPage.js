@@ -4,11 +4,11 @@ import { NavBar } from "../components/Navbar/Navbar"
 import { Upload } from "../components/Upload/Upload"
 import { ToastContainer } from "react-toastify"
 export const UploadPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <Categories />
         <Upload />
         <Footer />
         <ToastContainer/>
-    </>
+    </div>
 }

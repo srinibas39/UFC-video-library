@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 
 export const Home = () => {
   
-    return <div style={{ height: "88vh" }}>
+    return <div style={{ height: "100vh" }}>
         <NavBar />
         <Hero />
         <Footer />

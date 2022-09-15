@@ -7,12 +7,14 @@ import { VideoComponent } from "../components/VideoComponent/VideoComponent"
 import { VideoOption } from "../components/VideoOptions/VideoOption"
 import { useVideo } from "../context/VideoContext";
 import { ToastContainer } from "react-toastify"
+import { useMode } from "../context/ModeContext";
 
 export const Watch = () => {
 
     const { videoId } = useParams();
     const { allVideos } = useVideo();
     const [videoItem, setVideoItem] = useState({});
+   
 
     useEffect(() => {
         const video = allVideos.find((vid) => vid._id === videoId);
@@ -20,13 +22,12 @@ export const Watch = () => {
 
     });
 
-    return videoItem && <>
-
+    return videoItem && <div style={{ height: "100vh" }}>
         <NavBar />
-        <Categories/>
+        <Categories />
         <VideoComponent video={videoItem} />
         <VideoOption videoItem={videoItem} />
         <Footer />
-        <ToastContainer/>
-    </>
+        <ToastContainer />
+    </div>
 }

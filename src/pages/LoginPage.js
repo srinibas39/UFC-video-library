@@ -4,10 +4,10 @@ import { NavBar } from "../components/Navbar/Navbar"
 import { ToastContainer } from "react-toastify"
 
 export const LoginPage = () => {
-    return <>
+    return <div style={{height:"100vh"}}>
         <NavBar />
         <Login />
         <Footer />
         <ToastContainer/>
-    </>
+    </div>
 }

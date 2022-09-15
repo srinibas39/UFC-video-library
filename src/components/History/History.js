@@ -3,14 +3,18 @@ import { useHistory } from "../../context/HistoryContext"
 import { Categories } from "../Categories/Categories"
 import { VideoCard } from "../VideoCard/VideoCard"
 import "./History.css";
-import {ReactComponent as Historysvg} from "../../images/history.svg"
+import { ReactComponent as Historysvg } from "../../images/history.svg"
+import { useMode } from "../../context/ModeContext";
+import { useEffect } from "react";
+
 
 export const History = () => {
     const { history, removeAllHistory } = useHistory();
     const { token } = useAuth();
+    const { mode } = useMode()
 
 
-    return <div className="history-container">
+    return <div className="history-container" id={mode ? `dark` : ""} >
         <Categories />
         <div className="history">
             <div className="likes-header">
@@ -21,7 +25,7 @@ export const History = () => {
                 {
                     history.length ? history.map((el, idx) => {
                         return <VideoCard key={idx} el={el} />
-                    }):<Historysvg style={{margin:"1rem"}}/>
+                    }) : <Historysvg style={{ margin: "1rem" }} />
                 }
             </div>
         </div>

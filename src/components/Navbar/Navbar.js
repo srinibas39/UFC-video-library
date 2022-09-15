@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext";
+import { useMode } from "../../context/ModeContext";
 import "./Navbar.css";
 
 
@@ -7,9 +8,10 @@ import "./Navbar.css";
 export const NavBar = () => {
     const navigate = useNavigate();
     const { token } = useAuth();
+    const { mode} = useMode();
 
 
-    return <nav className="navbar">
+    return <nav className="navbar" id={mode ? `dark` : ""}>
         <div className="svg" onClick={() => navigate("/")}>
 
             <svg
@@ -35,7 +37,7 @@ export const NavBar = () => {
                     <button className="btn-signup" onClick={() => navigate("/profile")}><span class="material-symbols-outlined">
                         account_circle
                     </span></button>
-                 </li> :
+                </li> :
                     <>
                         <li><button className="btn-login" onClick={() => (navigate("/login"))}>LOG IN</button></li>
                         <li><button className="btn-signup" onClick={() => (navigate("/signup"))}>SIGN UP</button></li>

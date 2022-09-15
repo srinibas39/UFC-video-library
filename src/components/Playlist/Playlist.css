@@ -1,3 +1,7 @@
+.playlist-container{
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
+}
 .playlists{
     display: flex;
     flex-wrap: wrap;

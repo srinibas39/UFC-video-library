@@ -2,9 +2,12 @@
 .upload-container{
     height: 74vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-top: 2px;
 }
 
 .upload{
@@ -15,6 +18,7 @@
     align-items: center;
     box-shadow: var(--box-shadow1);
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 .upload form{
@@ -27,19 +31,18 @@
 
 .upload form input{
     height: 1.5rem;
+    outline: none;
+    padding: 4px;
 }
 
 .upload-container button{
-    position: absolute;
-    bottom: -8px;
-    width: 5rem;
-    height: 2rem;
     background-color: #d20a0a;
     border: 2px solid #d20a0a;
     color: white;
     font-family: "DIN 2014", sans-serif;
     cursor: pointer;
     margin: 1rem;
+    padding: 8px;
     
 }
 
