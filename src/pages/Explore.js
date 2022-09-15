@@ -23,7 +23,7 @@ export const Explore = () => {
     }, [allVideos])
 
 
-    return <div style={{ height: "100vh" }} id={mode ? `dark` : ""} >
+    return allVideos.length && <div style={{ height: "100vh" }} id={mode ? `dark` : ""} >
         <NavBar />
         <Categories />
         <AutoComplete suggestions={suggestions} />

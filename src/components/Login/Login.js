@@ -34,9 +34,10 @@ export const Login = () => {
 
     const handleGuestLogin = () => {
         handleToast("login successful")
-
-        loginHandler("srinibaskhuntia39@gmail.com", "srinibaskhuntia");
-
+        setTimeout(() => {
+            loginHandler("srinibaskhuntia39@gmail.com", "srinibaskhuntia");
+            navigate("/explore");
+        }, 1500)
 
     }
 
