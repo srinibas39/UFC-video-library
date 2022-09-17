@@ -54,7 +54,7 @@ export const VideoCardContainer = () => {
     const categoryData = getFilteredData();
 
 
-    return allVideos && <>
+    return  <>
 
         <div className="video-filters" id={mode ? `dark` : ""}>
             {
