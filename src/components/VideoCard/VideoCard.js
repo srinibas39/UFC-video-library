@@ -75,10 +75,10 @@ export const VideoCard = ({ el, playlistId }) => {
         }
     }
 
-    const {mode}=useMode()
+    const { mode } = useMode();
 
 
-    return <div className="videocard" id={mode?"dark-font":""}>
+    return <div className="videocard" id={mode ? "dark-font" : ""}>
         <img src={el.thumbnail}></img>
         <div>
             <p>{el.title}</p>
@@ -107,7 +107,7 @@ export const VideoCard = ({ el, playlistId }) => {
                 </span></button> : ""
 
             }
-            
+
         </div>
 
         <button className="btn-watchnow" onClick={() => navigate(`/watch/${el._id}`)}>
