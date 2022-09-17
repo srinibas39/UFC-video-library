@@ -21,7 +21,7 @@ export const VideoComponent = ({video}) => {
         <div className="video-player-container" id={mode?"dark":""}>
             <div className="video-player">
                 <div className="video-iframe">
-                    {/* <ReactPlayer url={video.video} controls height="100%" width="100%" onStart={() => addHistory(token, video)} /> */}
+                    <ReactPlayer url={video.video} controls height="100%" width="100%" onStart={() => addHistory(token, video)} />
                 </div>
                 <Comment />
             </div>

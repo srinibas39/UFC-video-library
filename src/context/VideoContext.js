@@ -20,7 +20,7 @@ export const VideoProvider = ({ children }) => {
       try {
         const res = await GetAllVideos();
         if (res.status === 200 || res.status === 201) {
-          setAllVideos([...res.data.videos]);
+          setAllVideos(res.data.videos);
         }
       }
       catch (err) {
