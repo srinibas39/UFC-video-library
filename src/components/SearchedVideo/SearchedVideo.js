@@ -23,7 +23,7 @@ export const SearchedVideo = () => {
                 <Categories />
                 <div className="likes">
                     <div className="searched-header" id={mode ? "dark-font" : ""}>
-                        <h2 style={{ textAlign: "center" }}>{`Search Results for "${text}"`}</h2>
+                        {/* <h2 style={{ textAlign: "center" }}>{`Search Results for "${text}"`}</h2> */}
                     </div>
                     <div className="card-container">
                         {
