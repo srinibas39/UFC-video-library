@@ -6,33 +6,36 @@ import { Footer } from "../Footer/Footer";
 import { NavBar } from "../Navbar/Navbar";
 import { VideoCard } from "../VideoCard/VideoCard";
 import "./SearchedVideo.css";
-import {ReactComponent as NotFound} from "../../images/notFound.svg"
+import { ReactComponent as NotFound } from "../../images/notFound.svg"
+import { useEffect } from "react";
 
 export const SearchedVideo = () => {
-    const { searchedVideo } = useVideo();
+    const { searchedVideo, text } = useVideo();
     const navigate = useNavigate();
-    const {mode}=useMode()
+    const { mode } = useMode();
 
-    return <div style={{height:"100vh"}}>
+
+
+    return <div style={{ height: "100vh" }}>
         <NavBar />
         {
-            searchedVideo ? <div className="likes-container" id={mode?"dark":""}>
+            searchedVideo ? <div className="likes-container" id={mode ? "dark" : ""}>
                 <Categories />
                 <div className="likes">
-                    <div className="searched-header" id={mode?"dark-font":""}>
-                        <h2 style={{textAlign:"center"}}>Search Results for "" </h2>
+                    <div className="searched-header" id={mode ? "dark-font" : ""}>
+                        <h2 style={{ textAlign: "center" }}>{`Search Results for "${text}"`}</h2>
                     </div>
                     <div className="card-container">
                         {
-                           searchedVideo.length ? searchedVideo.map((vid) => {
+                            searchedVideo.length ? searchedVideo.map((vid) => {
                                 return <VideoCard el={vid} key={vid._id} />
-                            }):<NotFound/>
+                            }) : <NotFound />
                         }
 
                     </div>
                 </div>
             </div> : navigate("/explore")
         }
-        <Footer/>
+        <Footer />
     </div>
 }
