@@ -5,7 +5,7 @@ import { VideoCard } from "../VideoCard/VideoCard"
 import "./History.css";
 import { ReactComponent as Historysvg } from "../../images/history.svg"
 import { useMode } from "../../context/ModeContext";
-import { useEffect } from "react";
+
 
 
 export const History = () => {

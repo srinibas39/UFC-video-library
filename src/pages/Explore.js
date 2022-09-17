@@ -15,15 +15,15 @@ export const Explore = () => {
     const { allVideos } = useVideo();
     const [suggestions, setSuggestions] = useState([]);
     const { mode } = useMode();
-    useEffect(() => {
-        if (allVideos.length) {
-            const suggestionList = allVideos.map((el) => el.title)
-            setSuggestions(suggestionList);
-        }
-    }, [allVideos])
+    // useEffect(() => {
+    //     if (allVideos) {
+    //         const suggestionList = allVideos.map((el) => el.title)
+    //         setSuggestions(suggestionList);
+    //     }
+    // }, [allVideos])
 
 
-    return allVideos.length && <div style={{ height: "100vh" }} id={mode ? `dark` : ""} >
+    return <div style={{ height: "100vh" }} id={mode ? `dark` : ""} >
         <NavBar />
         <Categories />
         <AutoComplete suggestions={suggestions} />
