@@ -12,7 +12,7 @@ export const VideoProvider = ({ children }) => {
   const [allVideos, setAllVideos] = useState([]);
   const [videoFilters, setVideoFilters] = useState(["MMA Matches", "MMA Podcasts", "MMA Facts"]);
   const [searchedVideo, setsearchedVideo] = useState(null);
-  const [text, setText] = useState("")
+  // const [text, setText] = useState("")
 
 
 
@@ -68,7 +68,7 @@ export const VideoProvider = ({ children }) => {
     setsearchedVideo(allVideos.filter((video) => video.title === title))
   }
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo, removeComment, setText, text }} >
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo, removeComment }} >
     {children}
   </VideoContext.Provider>
 }

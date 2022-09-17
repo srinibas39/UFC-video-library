@@ -14,9 +14,6 @@ export const VideoCardContainer = () => {
     const [filteredData, setFilteredData] = useState([]);
     const { mode } = useMode();
 
-
-
-
     const handleFilteredData = (category) => {
 
 

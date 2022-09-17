@@ -7,10 +7,10 @@ import { NavBar } from "../Navbar/Navbar";
 import { VideoCard } from "../VideoCard/VideoCard";
 import "./SearchedVideo.css";
 import { ReactComponent as NotFound } from "../../images/notFound.svg"
-import { useEffect } from "react";
+
 
 export const SearchedVideo = () => {
-    const { searchedVideo, text } = useVideo();
+    const { searchedVideo } = useVideo();
     const navigate = useNavigate();
     const { mode } = useMode();
 

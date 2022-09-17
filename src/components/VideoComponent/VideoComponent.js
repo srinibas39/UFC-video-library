@@ -8,8 +8,6 @@ import ReactPlayer from 'react-player'
 import { useMode } from "../../context/ModeContext";
 
 
-
-
 export const VideoComponent = ({video}) => {
 
     const { addHistory } = useHistory();

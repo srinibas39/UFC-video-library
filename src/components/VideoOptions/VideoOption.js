@@ -7,7 +7,8 @@ import "./VideoOption.css"
 
 export const VideoOption = ({ videoItem }) => {
 
-    const {mode}=useMode()  
+    const {mode}=useMode();
+      
     return <div className="video-option-container" id={mode?"dark":""}>
         <div className="video-option" >
             <div className="video-option-description">
