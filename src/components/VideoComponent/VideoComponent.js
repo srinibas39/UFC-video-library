@@ -16,8 +16,6 @@ export const VideoComponent = ({video}) => {
     const { token } = useAuth();
     const {mode}=useMode()
 
-   
-
     return <>
 
         <div className="video-player-container" id={mode?"dark":""}>
