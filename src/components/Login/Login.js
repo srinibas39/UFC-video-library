@@ -24,7 +24,7 @@ export const Login = () => {
             setTimeout(() => {
                 loginHandler(form.email, form.password);
                 navigate("/explore");
-            }, 1500)
+            }, 1000)
 
         }
         else {
@@ -37,7 +37,7 @@ export const Login = () => {
         setTimeout(() => {
             loginHandler("srinibaskhuntia39@gmail.com", "srinibaskhuntia");
             navigate("/explore");
-        }, 1500)
+        }, 1000)
 
     }
 
@@ -63,6 +63,6 @@ export const Login = () => {
                 </div>
             </div>
         </div>
-        <ToastContainer />
+        
     </>
 }

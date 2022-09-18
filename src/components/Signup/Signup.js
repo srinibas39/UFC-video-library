@@ -17,7 +17,7 @@ export const Signup = () => {
             setTimeout(() => {
                 signupHandler(form.email, form.password, form.firstName, form.lastName);
                 navigate("/explore")
-            }, 1500)
+            }, 1000)
         }
         else {
             handleToastWarning("Please fill up the sign up form");
@@ -27,7 +27,7 @@ export const Signup = () => {
         handleToast("filled up with Dummy Data");
         setTimeout(()=>{
            setForm({...form,email:"sriyasri39@gmail.com",password:"12345678",firstName:"Sriyasri",lastName:"Khuntia"})
-        },0)
+        },1000)
     }
 
     return <>
@@ -59,6 +59,5 @@ export const Signup = () => {
                 </div>
             </div>
         </div>
-        <ToastContainer />
     </>
 }
