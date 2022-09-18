@@ -25,7 +25,8 @@ export const AuthProvider = ({ children }) => {
             setToken(data.encodedToken);
         }
         catch (err) {
-            handleToastError(err);
+            // handleToastError(err);
+            console.log(err)
         }
     }
     const signupHandler = async (email, password, firstName, lastName) => {
@@ -39,7 +40,8 @@ export const AuthProvider = ({ children }) => {
 
         }
         catch (err) {
-            handleToastError(err);
+            // handleToastError(err);
+            console.log(err)
         }
     }
     const logoutHandler = () => {
