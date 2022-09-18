@@ -31,19 +31,19 @@ export const HistoryProvider = ({ children }) => {
             handleToastError(err);
         }
     }
-    const removeAllHistory = async (token) => {
-        try {
-            handleToast("Removing all the videos from the history")
-            setTimeout(async () => {
-                const res = await RemoveAllHistory(token);
-                setHistory(res.data.history)
-            }, 1500)
+    const removeAllHistory =  (token) => {
+        // try {
+        //     handleToast("Removing all the videos from the history")
+        //     setTimeout(async () => {
+        //         const res = await RemoveAllHistory(token);
+        //         setHistory(res.data.history)
+        //     }, 1000)
 
 
-        }
-        catch (err) {
-            handleToastError(err);
-        }
+        // }
+        // catch (err) {
+        //     handleToastError(err);
+        // }
     }
 
 
