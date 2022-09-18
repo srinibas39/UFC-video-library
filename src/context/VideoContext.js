@@ -25,7 +25,8 @@ export const VideoProvider = ({ children }) => {
         }
       }
       catch (err) {
-        handleToastError(err);
+        // handleToastError(err);
+        console.log(err)
       }
     })()
 
@@ -37,7 +38,8 @@ export const VideoProvider = ({ children }) => {
       return res.data.video;
     }
     catch (err) {
-      handleToastError(err);
+      // handleToastError(err);
+      console.log(err)
     }
   }
 
