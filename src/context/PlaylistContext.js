@@ -61,7 +61,7 @@ export const PlaylistProvider = ({ children }) => {
             const res = await GetAllPlaylists(token);
             setPlaylists(res.data.playlists)
         }
-        catch (error) {
+        catch (err) {
             handleToastError(err.message)
         }
     }
@@ -71,7 +71,7 @@ export const PlaylistProvider = ({ children }) => {
             const res = await GetPlaylistVideos(token, playlistId);
             setPlaylist(res.data.playlist)
         }
-        catch (error) {
+        catch (err) {
             handleToastError(err.message)
         }
     }
