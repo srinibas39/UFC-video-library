@@ -19,8 +19,7 @@ export const HistoryProvider = ({ children }) => {
             setHistory(res.data.history);
         }
         catch (err) {
-            // handleToastError(err);
-            console.log(err)
+            handleToastError(err.message)
         }
     }
     const removeHistory = async (token, videoId) => {
@@ -29,22 +28,22 @@ export const HistoryProvider = ({ children }) => {
             setHistory(res.data.history);
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message);
         }
     }
     const removeAllHistory =  (token) => {
-        // try {
-        //     handleToast("Removing all the videos from the history")
-        //     setTimeout(async () => {
-        //         const res = await RemoveAllHistory(token);
-        //         setHistory(res.data.history)
-        //     }, 1000)
+        try {
+            handleToast("Removing all the videos from the history")
+            setTimeout(async () => {
+                const res = await RemoveAllHistory(token);
+                setHistory(res.data.history)
+            }, 1000)
 
 
-        // }
-        // catch (err) {
-        //     handleToastError(err);
-        // }
+        }
+        catch (err) {
+            handleToastError(err.message)
+        }
     }
 
 

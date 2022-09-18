@@ -18,7 +18,7 @@ export const LikeProvider = ({ children }) => {
             setLikes(res.data.likes)
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
     const removeLike = async (token, videoId) => {
@@ -27,7 +27,7 @@ export const LikeProvider = ({ children }) => {
             setLikes(res.data.likes)
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
 
@@ -37,7 +37,7 @@ export const LikeProvider = ({ children }) => {
            handleToastError(res.data.likes);
         }
         catch (err) {
-            console.log(err);
+            handleToastError(err.message)
         }
     }
 

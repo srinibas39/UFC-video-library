@@ -19,7 +19,7 @@ export const WatchlaterProvider = ({ children }) => {
 
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
     const removeWatchlater = async (token, videoId) => {
@@ -29,7 +29,7 @@ export const WatchlaterProvider = ({ children }) => {
 
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
     return <WatchlaterContext.Provider value={{ addWatchlater, watchlater, removeWatchlater }}>

@@ -12,7 +12,7 @@ export const VideoProvider = ({ children }) => {
   const [allVideos, setAllVideos] = useState([]);
   const [videoFilters, setVideoFilters] = useState(["MMA Matches", "MMA Podcasts", "MMA Facts"]);
   const [searchedVideo, setsearchedVideo] = useState(null);
-  // const [text, setText] = useState("")
+  const [text, setText] = useState("")
 
 
 
@@ -25,8 +25,7 @@ export const VideoProvider = ({ children }) => {
         }
       }
       catch (err) {
-        // handleToastError(err);
-        console.log(err)
+        handleToastError(err.message)
       }
     })()
 
@@ -38,8 +37,7 @@ export const VideoProvider = ({ children }) => {
       return res.data.video;
     }
     catch (err) {
-      // handleToastError(err);
-      console.log(err)
+      handleToastError(err.message)
     }
   }
 
@@ -70,7 +68,7 @@ export const VideoProvider = ({ children }) => {
     setsearchedVideo(allVideos.filter((video) => video.title === title))
   }
 
-  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo, removeComment }} >
+  return <VideoContext.Provider value={{ allVideos, setAllVideos, getSingleVideo, addComments, addVideo, videoFilters, getSearchedVideo, searchedVideo, removeComment, text, setText }} >
     {children}
   </VideoContext.Provider>
 }

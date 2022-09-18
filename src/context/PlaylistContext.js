@@ -21,7 +21,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylists(res.data.playlists);
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
 
@@ -31,7 +31,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylists(res.data.playlists);
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
 
@@ -42,7 +42,7 @@ export const PlaylistProvider = ({ children }) => {
 
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
 
@@ -52,7 +52,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylist(res.data.playlist)
         }
         catch (err) {
-            handleToastError(err);
+            handleToastError(err.message)
         }
     }
 
@@ -62,7 +62,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylists(res.data.playlists)
         }
         catch (error) {
-            handleToastError(error);
+            handleToastError(err.message)
         }
     }
 
@@ -72,7 +72,7 @@ export const PlaylistProvider = ({ children }) => {
             setPlaylist(res.data.playlist)
         }
         catch (error) {
-            handleToastError(error);
+            handleToastError(err.message)
         }
     }
     

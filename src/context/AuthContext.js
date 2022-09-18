@@ -4,6 +4,7 @@ import { SignupServices } from "../services/SignupServices";
 import { handleToastError } from "../utils/toastUtils";
 
 
+
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -25,8 +26,7 @@ export const AuthProvider = ({ children }) => {
             setToken(data.encodedToken);
         }
         catch (err) {
-            // handleToastError(err);
-            console.log(err)
+            handleToastError(err.message)
         }
     }
     const signupHandler = async (email, password, firstName, lastName) => {
@@ -40,8 +40,7 @@ export const AuthProvider = ({ children }) => {
 
         }
         catch (err) {
-            // handleToastError(err);
-            console.log(err)
+            handleToastError(err.message)
         }
     }
     const logoutHandler = () => {

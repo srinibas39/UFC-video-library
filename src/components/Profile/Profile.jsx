@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { useAuth } from "../../context/AuthContext";
 import { useMode } from "../../context/ModeContext";
 import { handleToast } from "../../utils/toastUtils";
@@ -35,7 +36,7 @@ export const Profile = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       </div>
-      
+      <ToastContainer />
     </>
   );
 };

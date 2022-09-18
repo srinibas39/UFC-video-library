@@ -41,37 +41,6 @@ export const getHistoryVideosHandler = function (schema, request) {
  * body contains {video}
  * */
 
-// export const addVideoToHistoryHandler = function (schema, request) {
-//   const user = requiresAuth.call(this, request);
-//   try {
-//     if (!user) {
-//       return new Response(
-//         404,
-//         {},
-//         {
-//           errors: ["The email you entered is not Registered. Not Found error"],
-//         }
-//       );
-//     }
-//     const { video } = JSON.parse(request.requestBody);
-//     if (user.history.some((item) => item.id === video.id)) {
-//       user.history = user.history.filter((item) => item.id !== video.id);
-//       user.history.unshift(video);
-//       return new Response(201, {}, { history: user.history });
-//     }
-//     user.history.push(video);
-//     return new Response(201, {}, { history: user.history });
-//   } catch (error) {
-//     return new Response(
-//       500,
-//       {},
-//       {
-//         error,
-//       }
-//     );
-//   }
-// };
-
 export const addVideoToHistoryHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
   try {
@@ -86,13 +55,9 @@ export const addVideoToHistoryHandler = function (schema, request) {
     }
     const { video } = JSON.parse(request.requestBody);
     if (user.history.some((item) => item.id === video.id)) {
-      return new Response(
-        409,
-        {},
-        {
-          errors: ["The video is already in your history"],
-        }
-      );
+      user.history = user.history.filter((item) => item.id !== video.id);
+      user.history.unshift(video);
+      return new Response(201, {}, { history: user.history });
     }
     user.history.push(video);
     return new Response(201, {}, { history: user.history });
@@ -106,6 +71,8 @@ export const addVideoToHistoryHandler = function (schema, request) {
     );
   }
 };
+
+
 
 /**
  * This handler handles removing videos from user's history.

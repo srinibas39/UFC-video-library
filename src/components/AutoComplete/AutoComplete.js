@@ -7,7 +7,7 @@ import "./AutoComplete.css"
 export const AutoComplete = ({ suggestions }) => {
 
 
-    const { getSearchedVideo } = useVideo();
+    const { getSearchedVideo ,setText} = useVideo();
     const navigate = useNavigate();
 
     const [filteredSuggestion, setFiltereSuggestion] = useState([]);
@@ -26,7 +26,7 @@ export const AutoComplete = ({ suggestions }) => {
 
     const handleSearchText = (e) => {
         setSearchText(e.target.innerText);
-        // setText(e.target.innerText)
+        setText(e.target.innerText)
         getSearchedVideo(e.target.innerText);
         navigate("/search");
         setFiltereSuggestion([]);
