@@ -19,7 +19,8 @@ export const HistoryProvider = ({ children }) => {
             setHistory(res.data.history);
         }
         catch (err) {
-            handleToastError(err);
+            // handleToastError(err);
+            console.log(err)
         }
     }
     const removeHistory = async (token, videoId) => {
