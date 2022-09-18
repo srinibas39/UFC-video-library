@@ -4,7 +4,6 @@ import "./Login.css"
 import { useAuth } from "../../context/AuthContext";
 import { useEffect } from "react";
 import { handleToast, handleToastWarning } from "../../utils/toastUtils";
-import { ToastContainer } from 'react-toastify';
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -23,7 +22,7 @@ export const Login = () => {
             handleToast("login successful")
             setTimeout(() => {
                 loginHandler(form.email, form.password);
-                navigate("/");
+                navigate("/explore");
             }, 1000)
 
         }
@@ -36,7 +35,7 @@ export const Login = () => {
         handleToast("login successful")
         setTimeout(() => {
             loginHandler("srinibaskhuntia39@gmail.com", "srinibaskhuntia");
-            navigate("/");
+            navigate("/explore");
         }, 1000)
 
     }
